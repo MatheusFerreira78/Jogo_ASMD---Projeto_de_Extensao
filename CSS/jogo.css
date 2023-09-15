@@ -1,0 +1,120 @@
+* { 
+    margin: 0; 
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+h1{
+    background-color: rgb(253, 253, 90);
+    position:absolute;
+    top: 10px;
+    left: 160px;
+    justify-content: center;
+    border: outset 7px #711fb4;
+    align-items: center;
+    text-align: center;
+    font-size: 46px;
+    color: #000000;
+    font-family: 'Serif';
+}
+
+.Botao_all{
+    position:absolute;
+    top: 800px;
+    left: 600px;
+    
+}
+
+#botao{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #000000;
+    font-family: arial;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:15.1px;
+    cursor: pointer;
+}
+
+#botao:active{
+    background-color: rgba(96, 96, 99, 0.411);
+    color: #000000;
+}
+
+
+.Tabuleiro{
+    position:absolute;
+    top: 10px;
+    left: 1300px;
+    text-align: center;
+    font-size: 60px;
+    width: 600px;
+    height: 900px;
+    border: outset 7px #711fb4;
+    background-color:rgb(253, 253, 90);
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+span{
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+#dado1{
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    height: 500px;
+}
+
+#dado2{
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+    height: 500px;
+}
+
+#dado3{
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+    height: 500px;
+}
+
+#ponteiro1{
+    position: absolute;
+    top: 43%;
+    left: 18%;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+#ponteiro2{
+    position: absolute;
+    top: 43%;
+    left: 625px;
+    left: 850px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
