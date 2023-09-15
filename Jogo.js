@@ -7,6 +7,7 @@ function randomDice() {
 
 function randomOperation() {
 
+  //numeros seguem a ordem: 1 = soma, 2 = subtração, 3 = multiplicação, 4 = divisão
   //const operations = ['+', '-', '*', '/'];
 
   const operations = [1,2,3,4];
