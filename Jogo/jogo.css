@@ -2,20 +2,18 @@
     margin: 0; 
     padding: 0;
 }
-html {
-    height: 100%;
-}
 
 body{
     min-height: 100%;
     background-color: #ffffff;
 }
 
-h1{
+.Titulo_principal{
     background-color: rgb(253, 253, 90);
     position:absolute;
     top: 1%;
     left: 7%;
+    width: 50%;
     justify-content: center;
     border: outset 7px #711fb4;
     align-items: center;
@@ -25,79 +23,67 @@ h1{
     font-family: 'Serif';
 }
 
-.Botao_all{
-    position:absolute;
-    top: 800px;
-    left: 600px;
+#botao{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    width: 20%;
+    justify-content: center;
+    border: outset 7px #711fb4;
+    border-radius: 10px;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 500;
+    background-color: rgb(253, 253, 90);
+    padding: 20px;
+    cursor: pointer;
     
 }
 
-#botao{
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 12px;
-    color: #000000;
-    font-family: arial;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding:15.1px;
-    cursor: pointer;
+#botao:hover{
+    background-color: #711fb4;
+    border: outset 7px rgb(253, 253, 90);
+    color: rgb(255, 255, 255);
 }
 
 #botao:active{
-    background-color: rgba(96, 96, 99, 0.411);
-    color: #000000;
+    border: outset 7px #711fb4;
 }
 
 
 .Tabuleiro{
-    position:absolute;
+    position: absolute;
     top: 1%;
     left: 68%;
+    width: 31.5%;
+    height: 98%;
     text-align: center;
     font-size: 60px;
-    width: 600px;
-    height: 900px;
     border: outset 7px #711fb4;
     background-color:rgb(253, 253, 90);
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium';
 }
 
-span{
-    display: flex;
-    width: auto;
-    height: auto;
-}
-
 #dado1{
     position: absolute;
-    top: 20%;
-    left: -100px;
-    display: flex;
-    justify-content: flex-end;
-    width: 500px;
-    height: 500px;
+    top: 28%;
+    left: 1%;
 }
 
 #dado2{
     position: absolute;
-    top: 20%;
-    left: 22%;
-    display: flex;
-    justify-content: flex-start;
-    width: 500px;
-    height: 500px;
+    top: 28%;
+    left: 29%;
 }
 
 #dado3{
     position: absolute;
-    top: 20%;
-    left: 48%;
-    display: flex;
-    justify-content: flex-start;
-    width: 500px;
-    height: 500px;
+    top: 28%;
+    left: 57%;
 }
 
 #ponteiro1{
