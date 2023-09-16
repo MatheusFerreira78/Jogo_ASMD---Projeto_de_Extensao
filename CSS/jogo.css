@@ -14,8 +14,8 @@ body{
 h1{
     background-color: rgb(253, 253, 90);
     position:absolute;
-    top: 10px;
-    left: 160px;
+    top: 1%;
+    left: 7%;
     justify-content: center;
     border: outset 7px #711fb4;
     align-items: center;
@@ -52,8 +52,8 @@ h1{
 
 .Tabuleiro{
     position:absolute;
-    top: 10px;
-    left: 1300px;
+    top: 1%;
+    left: 68%;
     text-align: center;
     font-size: 60px;
     width: 600px;
