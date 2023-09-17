@@ -44,13 +44,12 @@ body{
 }
 
 #botao:hover{
-    background-color: #711fb4;
-    border: outset 7px rgb(253, 253, 90);
+    background-color: #000000;
     color: rgb(255, 255, 255);
 }
 
 #botao:active{
-    border: outset 7px #711fb4;
+    border: none;
 }
 
 
