@@ -67,39 +67,83 @@ body{
     font-family: 'Franklin Gothic Medium';
 }
 
-#dado1{
+#dado_1{
     position: absolute;
     top: 28%;
     left: 1%;
 }
 
-#dado2{
+#dado_2{
     position: absolute;
     top: 28%;
     left: 29%;
 }
 
-#dado3{
+#dado_3{
     position: absolute;
     top: 28%;
     left: 57%;
 }
 
-#ponteiro1{
+#operacao_1{
     position: absolute;
-    top: 43%;
-    left: 18%;
+    top: 35%;
+    left: 17%;
     display: flex;
     width: 100px;
     height: 100px;
 }
 
-#ponteiro2{
+#operacao_2{
     position: absolute;
-    top: 43%;
-    left: 625px;
-    left: 850px;
+    top: 35%;
+    left: 45%;
     display: flex;
     width: 100px;
     height: 100px;
+}
+
+#tampinha_1 {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+#tampinha_2 {
+    position: absolute;
+    top: 90%;
+    left: 76%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+#tampinha_3 {
+    position: absolute;
+    top: 90%;
+    left: 82%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+#tampinha_4 {
+    position: absolute;
+    top: 90%;
+    left: 88%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+#tampinha_5 {
+    position: absolute;
+    top: 90%;
+    left: 94%;
+    width: 70px;
+    height: 70px;
+    display: flex;
 }
