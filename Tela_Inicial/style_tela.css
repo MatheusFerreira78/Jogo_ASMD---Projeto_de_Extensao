@@ -3,13 +3,28 @@
     padding: 0;
 }
 
-h1{
+body{
+    background-color: #000000;
+}
+
+.titulo1{
     position: absolute;
     top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 46px;
-    color: #000000;
+    color: #ffffff;
+    font-family: 'Serif';
+    text-align: center;
+}
+
+.titulo2{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #ffffff;
     font-family: 'Serif';
     text-align: center;
 }
@@ -24,6 +39,19 @@ form{
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+}
+
+.Regras{
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(253, 253, 90);
+    width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    font-family: 'arial';
 }
 
 .sub_titulo{
