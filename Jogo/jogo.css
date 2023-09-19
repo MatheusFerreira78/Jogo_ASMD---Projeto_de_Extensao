@@ -52,7 +52,6 @@ body{
     border: none;
 }
 
-
 .Tabuleiro{
     position: absolute;
     top: 1%;
@@ -65,6 +64,11 @@ body{
     background-color:rgb(253, 253, 90);
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium';
+}
+
+#jogadores{
+    font-size: 20px;
+    font-family: 'Serif';
 }
 
 #dado_1{
