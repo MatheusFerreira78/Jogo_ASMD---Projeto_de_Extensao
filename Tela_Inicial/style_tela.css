@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .titulo1{
@@ -13,7 +13,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 46px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Serif';
     text-align: center;
 }
@@ -24,7 +24,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Serif';
     text-align: center;
 }
@@ -65,6 +65,7 @@ form{
     text-align: center;
 }
 
+
 input{
     width: 100%;
     padding: 10px;
@@ -75,6 +76,7 @@ input{
     outline: none;
 }
 
+/* Cor de fundo do input, da letra, definindo sem bordas e o ponteiro do mouse a "mãozinha"*/
 input[type="submit"]{
     background-color: #711fb4;
     color: #ffffff;
@@ -82,14 +84,28 @@ input[type="submit"]{
     cursor: pointer;
 }
 
+/* Cor de fundo do input quando passar o mouse em cima */
 input[type="submit"]:hover{
     background-color: #000000;
 }
 
+/* Tirar a borda do input quando tiver ativado/clicado */
 input[type="submit"]:active{
     border: none;
 }
 
+/* Cor de fundo do input */
 input[type="text"]{
     background-color: rgb(253, 253, 90);
+}
+
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(253, 253, 90) inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(3, 3, 3) !important;
 }

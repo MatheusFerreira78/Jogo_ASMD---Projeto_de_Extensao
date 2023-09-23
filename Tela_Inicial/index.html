@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem Vindo</title>
-    <script src="./tela.js"></script>
+    <script src="./tela.js" defer></script>
     <link rel="stylesheet" href="./style_tela.css">
     <base href="./imagens_tela/">
     <link rel="shortcut icon" type="imagex/png" href="dado-icon.png">
@@ -17,21 +17,21 @@
         <label class="sub_titulo">Insira os Jogadores</label>
         <br><br>
         <label>Jogador 1:</label>
-        <input type="text" name="nome1" id="nome1" placeholder="Nome do jogador" required>
+        <input type="text" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador" required>
         <br><br>
         <label>Jogador 2:</label>
-        <input type="text" name="nome2" id="nome2" placeholder="Nome do jogador" required>
+        <input type="text" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador" required>
         <br><br>
         <label>Jogador 3:</label>
-        <input type="text" name="nome3" id="nome3" placeholder="Nome do jogador" required>
+        <input type="text" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador" required>
         <br><br>
         <label>Jogador 4:</label>
-        <input type="text" name="nome4" id="nome4" placeholder="Nome do jogador" required>
+        <input type="text" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador" required>
         <br><br>
         <label>Jogador 5:</label>
-        <input type="text" name="nome5" id="nome5" placeholder="Nome do jogador" required>
+        <input type="text" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador" required>
         <br><br>
-        <input type="submit" value="Jogar">
+        <input type="submit" id="enviar" value="Jogar">
         
     </form>
 
