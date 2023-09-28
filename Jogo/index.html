@@ -14,6 +14,9 @@
 <body>
     <h1 class="Titulo_principal"> Adição, Subtração, Multiplicação e Divisão</h1> 
     
+    <div>
+        <h4 class="Vez">Vez do Jogador:</h4>
+    </div>
 
     <div>
         <div class="dados">
@@ -28,17 +31,10 @@
     </div>
 
     <div>
-        <input type="button" onclick="main()" id="botao" value="Rodar dado" >
+        <input type="button" onclick="Iniciar_jogo()" id="botao" value="Rodar dado" >
     </div>
 
     <table class="Tabuleiro" border="1">
-        <tr id="jogadores">
-            <td> <b>JOGADOR 1</b> </td>
-            <td> <b>JOGADOR 2</b> </td>
-            <td> <b>JOGADOR 3</b> </td>
-            <td> <b>JOGADOR 4</b> </td>
-            <td> <b>JOGADOR 5</b> </td>
-        </tr>
         <tr>
            <td> 10 </td>
            <td> 10 </td>
@@ -134,14 +130,9 @@
     </div>
 
     <div>
-        <input type="button" onclick="Movimentar_tampinha_2()" id="teste" value="movimentar">
-    </div>
-
-    <form action="">
         <input type="number" id="resposta" placeholder="Digite a resposta">
-        <input type="submit" id="botao_resposta" value="Verificar">
-    </form>
-
+        <input type="button" onclick="verifcar_resposta()" id="botao_resposta" value="Verificar">
+    </div>
 
 </body>
 </html>
