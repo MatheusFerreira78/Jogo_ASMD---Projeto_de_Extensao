@@ -18,9 +18,20 @@ function Operacao_aleatoria() {
 
 }
 
-function Rodar_operacao_1() {
+function Rodar_operacao_1(dado_1, dado_2) {
+
+  var dado_1 = dado_1;
+  var dado_2 = dado_2;
 
   var random = Operacao_aleatoria();
+
+  if(random == 4) {
+    if(dado_1 % dado_2 != 0){
+      while(random == 4) {
+        random = Operacao_aleatoria();
+      }
+    }
+  } 
 
   if (random == 1) {
     document.getElementById("operacao_1").innerHTML = "<img src='ponteiro_soma.png'/>";
@@ -38,9 +49,21 @@ function Rodar_operacao_1() {
   return random;
 }
 
-function Rodar_operacao_2() {
+function Rodar_operacao_2(resposta_1, dado_3) {
+
+  var resposta_1 = resposta_1;
+  var dado_3 = dado_3;
+
 
   var random = Operacao_aleatoria();
+
+  if(random == 4) {
+    if(resposta_1 % dado_3 != 0){
+      while(random == 4) {
+        random = Operacao_aleatoria();
+      }
+    }
+  }
 
   if (random == 1) {
     document.getElementById("operacao_2").innerHTML = "<img src='ponteiro_soma.png'/>";
@@ -431,8 +454,24 @@ function Iniciar_jogo() {
   var dado_1 = Rodar_dado_1();
   var dado_2 = Rodar_dado_2();
   var dado_3 = Rodar_dado_3();
-  var operacao_1 = Rodar_operacao_1();
-  var operacao_2 = Rodar_operacao_2();
+  var operacao_1 = Rodar_operacao_1(dado_1, dado_2);
+  var resposta_1 = 0;
+
+  if(operacao_1 == 1) {
+    resposta_1 = dado_1 + dado_2;
+  }
+  else if(operacao_1 == 2) {
+    resposta_1 = dado_1 - dado_2;
+  }
+  else if(operacao_1 == 3) {
+    resposta_1 = dado_1 * dado_2;
+  }
+  else if(operacao_1 == 4) {
+    resposta_1 = dado_1 / dado_2;
+  }
+
+
+  var operacao_2 = Rodar_operacao_2(resposta_1, dado_3);
 
   resposta_Certa = calcular(dado_1, dado_2, dado_3, operacao_1, operacao_2);
 
