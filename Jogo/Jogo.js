@@ -1,3 +1,11 @@
+var jogador_1 = 0;
+var jogador_2 = 0;
+var jogador_3 = 0;
+var jogador_4 = 0;
+var jogador_5 = 0;
+var vez_jogador = 1;
+var resposta_Certa = 0;
+
 function Dado_aleatorio() {
 	const random = Math.floor(Math.random() * 6) + 1;
 
@@ -441,14 +449,6 @@ function calcular(dado1, dado2, dado3, operacao1, operacao2) {
 	return reposta_correta;
 }
 
-var jogador_1 = 0;
-var jogador_2 = 0;
-var jogador_3 = 0;
-var jogador_4 = 0;
-var jogador_5 = 0;
-var vez_jogador = 1;
-var resposta_Certa = 0;
-
 function Iniciar_jogo() {
 
 	var dado_1 = Rodar_dado_1();
@@ -476,7 +476,7 @@ function Iniciar_jogo() {
 	resposta_Certa = calcular(dado_1, dado_2, dado_3, operacao_1, operacao_2);
 
 	if(vez_jogador == 1){
-		document.querySelector("#tampa_1").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+		document.querySelector("#tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
 	}
 
 }
@@ -514,32 +514,31 @@ function verifcar_resposta() {
 		alert("Resposta errada");
 		resposta.value = "";
 	}
-
-	vez_jogador++;
-
-	if (vez_jogador > 5) {
-		vez_jogador = 1;
-	}
-	console.log("Vez do jogador: ", vez_jogador);
-
 }
 
 function vez(){
+
+	vez_jogador = vez_jogador + 1;
+
+	if(vez_jogador == 6){
+		vez_jogador = 1;
+	}
+	
+	console.log("Vez do jogador: ", vez_jogador);
 	
 	if(vez_jogador == 1){
-		document.querySelector("#tampa_1").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
 	}
 	else if(vez_jogador == 2){
-		document.querySelector("#tampa_2").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
 	}
 	else if(vez_jogador == 3){
-		document.querySelector("#tampa_3").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
 	}
 	else if(vez_jogador == 4){
-		document.querySelector("#tampa_4").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
 	}
 	else if(vez_jogador == 5){
-		document.querySelector("#tampa_5").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
 	}
-	
 }
