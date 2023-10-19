@@ -16,6 +16,13 @@
     
     <div>
         <h4 class="Vez">Vez do Jogador:</h4>
+        <div>
+            <span class="tampas" id="tampa_1"></span>
+            <span class="tampas" id="tampa_2"></span>
+            <span class="tampas" id="tampa_3"></span>
+            <span class="tampas" id="tampa_4"></span>
+            <span class="tampas" id="tampa_5"></span>
+        </div>
     </div>
 
     <div>
@@ -131,7 +138,7 @@
 
     <div>
         <input type="number" id="resposta" placeholder="Digite a resposta">
-        <input type="button" onclick="verifcar_resposta()" id="botao_resposta" value="Verificar">
+        <input type="button" onclick="verifcar_resposta(); vez()" id="botao_resposta" value="Verificar">
     </div>
 
 </body>

@@ -32,8 +32,8 @@ body{
     justify-content: center;
     border: outset 7px #711fb4;
     align-items: center;
-    text-align: center;
-    font-size: 30px;
+    text-align: left;
+    font-size: 40px;
     color: #000000;
     font-family: 'Serif';
 }
@@ -209,4 +209,13 @@ body{
 
 #botao_resposta:active{
     border: none;
+}
+
+.tampas{
+    position: absolute;
+    top: 10.9%;
+    left: 36%;
+    width: 45px;
+    height: 45px;
+    display: flex;
 }
