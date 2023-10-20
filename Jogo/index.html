@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title> JOGO ASMD </title>
-    <script src="./Jogo.js"></script>
+    <script src="./Jogo.js" defer></script>
     <script src="../Tela_Inicial/tela.js" defer></script>
     <link rel="stylesheet" href="./jogo.css">
     <base href="imagens_jogo/">
@@ -34,7 +34,7 @@
     </div>
 
     <div>
-        <input type="button" onclick="Iniciar_jogo()" id="botao" value="Rodar dado" >
+        <input type="button" id="botao" value="Rodar dado" >
     </div>
 
     <table class="Tabuleiro" border="1">
@@ -134,7 +134,7 @@
 
     <div>
         <input type="number" id="resposta" placeholder="Digite a resposta">
-        <input type="button" id="botao_resposta" onclick="verifcar_resposta(); vez()" value="Verificar">
+        <input type="button" id="botao_resposta" value="Verificar">
     </div>
 
 </body>
