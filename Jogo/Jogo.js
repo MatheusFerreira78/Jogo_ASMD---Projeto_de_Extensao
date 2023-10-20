@@ -542,3 +542,37 @@ function vez(){
 		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
 	}
 }
+
+const btn_Iniciar = document.querySelector("#botao");
+
+btn_Iniciar.addEventListener("click", Iniciar_jogo);
+
+const btn_Verificar = document.querySelector("#botao_resposta");
+
+btn_Verificar.addEventListener("click", function(event){
+	event.preventDefault();
+	verifcar_resposta();
+	vez();
+	
+});
+
+const meuInput = document.getElementById('resposta');
+const meuBotao = document.getElementById('botao_resposta');
+
+// Função para verificar e atualizar o estado do botão
+function verificarCampo() {
+  if (meuInput.value.trim() === '') {
+    meuBotao.disabled = true;
+  } else {
+    meuBotao.disabled = false;
+  }
+}
+
+// Inicialmente, desabilite o botão se o campo estiver vazio
+verificarCampo();
+
+// Adicionar um ouvinte de evento 'input' para verificar continuamente
+meuInput.addEventListener('input', verificarCampo);
+
+// Use um loop de verificação a cada 500 milissegundos (meio segundo)
+setInterval(verificarCampo, 500);
