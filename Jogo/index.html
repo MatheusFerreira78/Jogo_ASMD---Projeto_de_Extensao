@@ -5,23 +5,65 @@
     <meta name="viewport" content="width=device-width">
     <title> JOGO ASMD </title>
     <script src="./Jogo.js" defer></script>
-    <script src="../Tela_Inicial/tela.js" defer></script>
     <link rel="stylesheet" href="./jogo.css">
+    <link rel="stylesheet" href="./style_tela.css">
     <base href="imagens_jogo/">
     <link rel="shortcut icon" type="imagex/png" href="dado.png">
 </head>
 
 <body>
-    <h1 class="Titulo_principal"> Adição, Subtração, Multiplicação e Divisão</h1> 
+    <h1 id="titulo_1" class="titulo1">Seja Bem Vindo ao Jogo ASMD</h1>
+    <h3 id="titulo_2" class="titulo2">Adição, Subtração, Multiplicação e Divisão</h3>
+
+    <form id="formulario" name="F_insercao">
+        <label class="sub_titulo">Insira os Jogadores</label>
+        <br><br>
+        <label>Jogador 1:</label>
+        <input type="text" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador">
+        <br><br>
+        <label>Jogador 2:</label>
+        <input type="text" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador">
+        <br><br>
+        <label>Jogador 3:</label>
+        <input type="text" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador">
+        <br><br>
+        <label>Jogador 4:</label>
+        <input type="text" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador">
+        <br><br>
+        <label>Jogador 5:</label>
+        <input type="text" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador">
+        <br><br>
+        <input type="button" id="botao" value="Jogar">
+    </form>
+
+    <div id="regras" class="Regras">
+        <h2>Regras</h2><br>
+        <p>1. O jogo é composto por 5 jogadores.</p><br>
+
+        <p>2. Cada jogador irá sortear 3 dados na sua vez; após obter o 
+            resultado nos dados, será necessário realizar uma conta utilizando 
+            as operações matemáticas (pode ser duas operações diferentes ou 
+            iguais), se acertar, o jogador irá andar uma casa; se errar ou não 
+            souber, passa a vez. </p><br>
+        
+        <p>3. Os jogadores disputam pelo 1º,2º,3º,4º e 5º lugar.</p><br>
+
+        <p>4. O jogo termina quando todos os jogadores chegarem ao final do 
+            tabuleiro.</p><br>
+    </div>
+
+<!----------------------------------------------------------------------------------------------------------------->
+
+    <h1 hidden id="D_titulo_principal" class="Titulo_principal"> Adição, Subtração, Multiplicação e Divisão</h1> 
     
-    <div>
+    <div hidden id="D_vez_jogadores">
         <h4 class="Vez">Vez do Jogador:</h4>
         <div>
             <span class="tampas" id="tampa"></span>
         </div>
     </div>
 
-    <div>
+    <div hidden id="D_dados_jogadores">
         <div class="dados">
             <span id="dado_1"></span>
             <span id="dado_2"></span>
@@ -33,11 +75,7 @@
         </div>
     </div>
 
-    <div>
-        <input type="button" id="botao" value="Rodar dado" >
-    </div>
-
-    <table class="Tabuleiro" border="1">
+    <table hidden id="D_tabuleiro_jogadores" class="Tabuleiro" border="1">
         <tr>
            <td> 10 </td>
            <td> 10 </td>
@@ -124,7 +162,7 @@
 
     </table>
     
-    <div>
+    <div hidden id="D_tampinhas_jogadores">
         <img id="tampinha_1" src="tampa-de-garrafa-1.png">
         <img id="tampinha_2" src="tampa-de-garrafa-2.png">
         <img id="tampinha_3" src="tampa-de-garrafa-3.png">
@@ -132,9 +170,20 @@
         <img id="tampinha_5" src="tampa-de-garrafa-5.png">
     </div>
 
-    <div>
+    <div hidden id="D_botao_verificar">
+        <input type="button" id="botao_resposta" disabled="true" value="VERIFICAR RESPOSTA">
+    </div>
+    
+    <div hidden id="D_campo_resposta">
         <input type="number" id="resposta" placeholder="Digite a resposta">
-        <input type="button" id="botao_resposta" value="Verificar">
+    </div>
+
+    <div hidden id="D_botao_proximo">
+        <input type="button" id="botao_prox" value="NÃO SEI">
+    </div>
+
+    <div hidden id="D_rodar_dado">
+        <input type="button" id="rodar_dado" value="RODAR DADO 1x">
     </div>
 
 </body>

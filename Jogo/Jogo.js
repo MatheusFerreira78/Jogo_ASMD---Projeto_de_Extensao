@@ -544,34 +544,77 @@ function vez(){
 }
 
 const btn_Iniciar = document.querySelector("#botao");
-
-btn_Iniciar.addEventListener("click", Iniciar_jogo);
-
 const btn_Verificar = document.querySelector("#botao_resposta");
+const btn_botao_prox = document.querySelector("#botao_prox");
+const btn_Rodar_dado = document.querySelector("#rodar_dado");
+
+btn_Iniciar.addEventListener("click", function(){
+	
+	const titulo_1 = document.querySelector("#titulo_1");
+	const titulo_2 = document.querySelector("#titulo_2");
+	const formulario = document.querySelector("#formulario");
+	const regras = document.querySelector("#regras");
+
+	titulo_1.hidden = true;
+	titulo_2.hidden = true;
+	formulario.hidden = true;
+	regras.hidden = true;
+
+	const titulo = document.querySelector("#D_titulo_principal");
+	const vez_jogadores = document.querySelector("#D_vez_jogadores");
+	const tabuleiro = document.querySelector("#D_tabuleiro_jogadores");
+	const tampinhas_jogadores = document.querySelector("#D_tampinhas_jogadores");
+	const btn_Verificar = document.querySelector("#D_botao_verificar");
+	const meuInput = document.querySelector("#D_campo_resposta");
+	const btn_botao_proximo = document.querySelector("#D_botao_proximo");
+	const btn_Rodar_dado = document.querySelector("#D_rodar_dado");
+	
+	btn_Iniciar.hidden = true;
+
+	titulo.hidden = false;
+	vez_jogadores.hidden = false;
+	tabuleiro.hidden = false;
+	tampinhas_jogadores.hidden = false;
+	btn_Verificar.hidden = false;
+	meuInput.hidden = false;
+	btn_botao_proximo.hidden = false;
+	btn_Rodar_dado.hidden = false;
+
+	Iniciar_jogo();
+});
 
 btn_Verificar.addEventListener("click", function(event){
 	event.preventDefault();
 	verifcar_resposta();
 	vez();
-	
 });
 
-const meuInput = document.getElementById('resposta');
-const meuBotao = document.getElementById('botao_resposta');
+btn_botao_prox.addEventListener("click", function(){
+	vez();
+})
 
-// Função para verificar e atualizar o estado do botão
+btn_Rodar_dado.addEventListener("click", function(){
+	Rodar_dado_1();
+	Rodar_dado_2();
+	Rodar_dado_3();
+	Rodar_operacao_1();
+	Rodar_operacao_2();
+})
+
 function verificarCampo() {
-  if (meuInput.value.trim() === '') {
-    meuBotao.disabled = true;
-  } else {
-    meuBotao.disabled = false;
-  }
+
+	const meuInput = document.querySelector("#resposta");
+	const btn_Verificar = document.querySelector("#botao_resposta");
+
+	if (meuInput.value.trim() === '') {
+	btn_Verificar.disabled = true;
+	} else {
+	btn_Verificar.disabled = false;
+	}
 }
 
-// Inicialmente, desabilite o botão se o campo estiver vazio
-verificarCampo();
-
-// Adicionar um ouvinte de evento 'input' para verificar continuamente
+// adicona um ouvinte de evento para o evento de entrada no campo de texto
+const meuInput = document.querySelector("#resposta");
 meuInput.addEventListener('input', verificarCampo);
 
 // Use um loop de verificação a cada 500 milissegundos (meio segundo)

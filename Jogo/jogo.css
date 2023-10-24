@@ -38,35 +38,6 @@ body{
     font-family: 'Serif';
 }
 
-#botao{
-    position: absolute;
-    top: 90%;
-    left: 23%;
-    width: 20%;
-    justify-content: center;
-    border: outset 7px #711fb4;
-    border-radius: 10px;
-    color: #000000;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium';
-    font-weight: 500;
-    background-color: rgb(253, 253, 90);
-    padding: 20px;
-    cursor: pointer;
-    
-}
-
-#botao:hover{
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-}
-
-#botao:active{
-    border: none;
-}
-
 .Tabuleiro{
     position: absolute;
     top: 1%;
@@ -173,7 +144,6 @@ body{
     left: 3%;
     width: 20%;
     height: 70px;
-    display: flex;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium';
     text-align: center;
@@ -198,8 +168,7 @@ body{
     font-weight: 500;
     background-color: rgb(253, 253, 90);
     padding: 20px;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 
 #botao_resposta:hover{
@@ -219,4 +188,62 @@ body{
     width: 45px;
     height: 45px;
     display: flex;
+}
+
+#botao_prox{
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    width: 20%;
+    justify-content: center;
+    border: outset 7px #711fb4;
+    border-radius: 10px;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 500;
+    background-color: rgb(253, 253, 90);
+    padding: 20px;
+    cursor: pointer;  
+}
+
+#botao_prox:hover{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#botao_prox:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#rodar_dado{
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 10%;
+    justify-content: center;
+    border: outset 7px #711fb4;
+    border-radius: 10px;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 500;
+    background-color: rgb(253, 253, 90);
+    padding: 20px;
+    cursor: pointer;  
+}
+
+#rodar_dado:hover{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#rodar_dado:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
