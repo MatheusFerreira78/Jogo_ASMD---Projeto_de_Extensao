@@ -19,19 +19,19 @@
         <label class="sub_titulo">Insira os Jogadores</label>
         <br><br>
         <label>Jogador 1:</label>
-        <input type="text" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador">
+        <input type="text" maxlength="9" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador">
         <br><br>
         <label>Jogador 2:</label>
-        <input type="text" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador">
+        <input type="text" maxlength="9" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador">
         <br><br>
         <label>Jogador 3:</label>
-        <input type="text" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador">
+        <input type="text" maxlength="9" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador">
         <br><br>
         <label>Jogador 4:</label>
-        <input type="text" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador">
+        <input type="text" maxlength="9" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador">
         <br><br>
         <label>Jogador 5:</label>
-        <input type="text" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador">
+        <input type="text" maxlength="9" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador">
         <br><br>
         <input type="button" id="botao" value="Jogar">
     </form>
@@ -57,7 +57,7 @@
     <h1 hidden id="D_titulo_principal" class="Titulo_principal"> Adição, Subtração, Multiplicação e Divisão</h1> 
     
     <div hidden id="D_vez_jogadores">
-        <h4 class="Vez">Vez do Jogador:</h4>
+        <h2 class="Vez">VEZ DO JOGADOR:</h2>
         <div>
             <span class="tampas" id="tampa"></span>
         </div>
@@ -179,11 +179,47 @@
     </div>
 
     <div hidden id="D_botao_proximo">
-        <input type="button" id="botao_prox" value="NÃO SEI">
+        <input type="button" id="botao_prox" value="NÃO SEI A RESPOSTA">
     </div>
 
     <div hidden id="D_rodar_dado">
         <input type="button" id="rodar_dado" value="RODAR DADO 1x">
+        </div>
+    <div hidden id="D_nome_jogadores">
+        <h3 id="nome"></h3>
+    </div>
+
+    <div hidden  id="D_placar">
+        <table id="placar" border="1">
+            <tr>
+                <td id="placar_interno_tabela" colspan="2">Placar</td>
+            </tr>
+
+            <tr>
+                <td>JOGADOR 1 :</td>
+                <td id="nome_placar_1">0</td>
+            </tr>
+
+            <tr>
+                <td>JOGADOR 2 :</td>
+                <td id="nome_placar_2">0</td>
+            </tr>
+
+            <tr>
+                <td>JOGADOR 3 :</td>
+                <td id="nome_placar_3">0</td>
+            </tr>
+
+            <tr>
+                <td>JOGADOR 4 :</td>
+                <td id="nome_placar_4">0</td>
+            </tr>
+
+            <tr>
+                <td>JOGADOR 5 :</td>
+                <td id="nome_placar_5">0</td>
+            </tr>
+        </table>
     </div>
 
 </body>
