@@ -41,6 +41,16 @@ form{
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
 }
 
+#botao{
+    position: absolute;
+    top: 91%;
+    left: 5.5%;
+    width: 90%;
+    background-color: #711fb4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .Regras{
     position: absolute;
     top: 50%;
