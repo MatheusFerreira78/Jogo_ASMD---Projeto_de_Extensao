@@ -562,6 +562,7 @@ btn_Iniciar.addEventListener("click", function(){
 
 	const titulo = document.querySelector("#D_titulo_principal");
 	const vez_jogadores = document.querySelector("#D_vez_jogadores");
+	const dados_jogadores = document.querySelector("#D_dados_jogadores");
 	const tabuleiro = document.querySelector("#D_tabuleiro_jogadores");
 	const tampinhas_jogadores = document.querySelector("#D_tampinhas_jogadores");
 	const btn_Verificar = document.querySelector("#D_botao_verificar");
@@ -573,6 +574,7 @@ btn_Iniciar.addEventListener("click", function(){
 
 	titulo.hidden = false;
 	vez_jogadores.hidden = false;
+	dados_jogadores.hidden = false;
 	tabuleiro.hidden = false;
 	tampinhas_jogadores.hidden = false;
 	btn_Verificar.hidden = false;
