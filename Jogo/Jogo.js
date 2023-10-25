@@ -3,8 +3,10 @@ var jogador_2 = 0;
 var jogador_3 = 0;
 var jogador_4 = 0;
 var jogador_5 = 0;
+var nome1, nome2, nome3, nome4, nome5;
 var vez_jogador = 1;
 var resposta_Certa = 0;
+var contar_vez_rodar_dados = 0;
 
 function Dado_aleatorio() {
 	const random = Math.floor(Math.random() * 6) + 1;
@@ -569,7 +571,9 @@ btn_Iniciar.addEventListener("click", function(){
 	const meuInput = document.querySelector("#D_campo_resposta");
 	const btn_botao_proximo = document.querySelector("#D_botao_proximo");
 	const btn_Rodar_dado = document.querySelector("#D_rodar_dado");
-	
+	const nome_jogadores = document.querySelector("#D_nome_jogadores");
+	const placar = document.querySelector("#D_placar");
+
 	btn_Iniciar.hidden = true;
 
 	titulo.hidden = false;
@@ -581,18 +585,30 @@ btn_Iniciar.addEventListener("click", function(){
 	meuInput.hidden = false;
 	btn_botao_proximo.hidden = false;
 	btn_Rodar_dado.hidden = false;
+	nome_jogadores.hidden = false;
+	placar.hidden = false;
 
 	Iniciar_jogo();
+	pegarNOmes();
+	mostrarNOmes();
+	mostrar_pontos_placar();
 });
 
 btn_Verificar.addEventListener("click", function(event){
 	event.preventDefault();
 	verifcar_resposta();
 	vez();
+	mostrarNOmes();
+	mostrar_pontos_placar();
+
+	btn_Rodar_dado.hidden = false;
 });
 
 btn_botao_prox.addEventListener("click", function(){
 	vez();
+	mostrarNOmes();
+
+	btn_Rodar_dado.hidden = false;
 })
 
 btn_Rodar_dado.addEventListener("click", function(){
@@ -601,6 +617,8 @@ btn_Rodar_dado.addEventListener("click", function(){
 	Rodar_dado_3();
 	Rodar_operacao_1();
 	Rodar_operacao_2();
+
+	btn_Rodar_dado.hidden = true;
 })
 
 function verificarCampo() {
@@ -621,3 +639,52 @@ meuInput.addEventListener('input', verificarCampo);
 
 // Use um loop de verificação a cada 500 milissegundos (meio segundo)
 setInterval(verificarCampo, 500);
+
+function pegarNOmes(){
+
+	nome1 = document.querySelector("#nome1").value;
+	nome2 = document.querySelector("#nome2").value;
+	nome3 = document.querySelector("#nome3").value;
+	nome4 = document.querySelector("#nome4").value;
+	nome5 = document.querySelector("#nome5").value;
+	
+	console.log(nome1);
+	console.log(nome2);
+	console.log(nome3);
+	console.log(nome4);
+	console.log(nome5);
+}
+
+function mostrarNOmes(){
+
+	if(vez_jogador == 1){
+		document.getElementById("nome").textContent = nome1
+		document.getElementById("nome").style.color = "#35b724"
+	} else if (vez_jogador == 2){
+		document.getElementById("nome").textContent = nome2
+		document.getElementById("nome").style.color = "#b22323"
+	} else if (vez_jogador == 3){
+		document.getElementById("nome").textContent = nome3
+		document.getElementById("nome").style.color = "#3b23b2"
+	} else if (vez_jogador == 4){
+		document.getElementById("nome").textContent = nome4
+		document.getElementById("nome").style.color = "#bb4708"
+	} else if (vez_jogador == 5){
+		document.getElementById("nome").textContent = nome5
+		document.getElementById("nome").style.color = "#a11896"
+	}
+}
+
+function mostrar_pontos_placar(){
+	
+	document.getElementById("nome_placar_1").textContent = jogador_1
+
+	document.getElementById("nome_placar_2").textContent = jogador_2
+
+	document.getElementById("nome_placar_3").textContent = jogador_3
+
+	document.getElementById("nome_placar_4").textContent = jogador_4
+
+	document.getElementById("nome_placar_5").textContent = jogador_5
+
+}
