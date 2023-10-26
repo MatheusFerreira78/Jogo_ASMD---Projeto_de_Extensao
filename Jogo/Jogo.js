@@ -677,14 +677,19 @@ function mostrarNOmes(){
 
 function mostrar_pontos_placar(){
 	
+	document.getElementById("nome_jogadores_1").textContent = nome1;
 	document.getElementById("nome_placar_1").textContent = jogador_1
 
+	document.getElementById("nome_jogadores_2").textContent = nome2;
 	document.getElementById("nome_placar_2").textContent = jogador_2
 
+	document.getElementById("nome_jogadores_3").textContent = nome3;
 	document.getElementById("nome_placar_3").textContent = jogador_3
 
+	document.getElementById("nome_jogadores_4").textContent = nome4;
 	document.getElementById("nome_placar_4").textContent = jogador_4
 
+	document.getElementById("nome_jogadores_5").textContent = nome5;
 	document.getElementById("nome_placar_5").textContent = jogador_5
 
 }
