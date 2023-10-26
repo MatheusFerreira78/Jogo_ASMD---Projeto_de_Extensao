@@ -612,11 +612,7 @@ btn_botao_prox.addEventListener("click", function(){
 })
 
 btn_Rodar_dado.addEventListener("click", function(){
-	Rodar_dado_1();
-	Rodar_dado_2();
-	Rodar_dado_3();
-	Rodar_operacao_1();
-	Rodar_operacao_2();
+	Iniciar_jogo();
 
 	btn_Rodar_dado.hidden = true;
 })
