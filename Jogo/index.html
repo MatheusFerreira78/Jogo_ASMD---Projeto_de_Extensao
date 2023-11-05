@@ -12,33 +12,41 @@
 </head>
 
 <body>
-    <h1 id="titulo_1" class="titulo1">Seja Bem Vindo ao Jogo ASMD</h1>
+    <h1 id="titulo_1" class="titulo1">JOGO ASMD</h1>
     <h3 id="titulo_2" class="titulo2">Adição, Subtração, Multiplicação e Divisão</h3>
 
     <form id="formulario" name="F_insercao">
         <label class="sub_titulo">Insira os Jogadores</label>
         <br><br>
-        <label>Jogador 1:</label>
-        <input type="text" maxlength="9" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador">
-        <br><br>
-        <label>Jogador 2:</label>
-        <input type="text" maxlength="9" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador">
-        <br><br>
-        <label>Jogador 3:</label>
-        <input type="text" maxlength="9" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador">
-        <br><br>
-        <label>Jogador 4:</label>
-        <input type="text" maxlength="9" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador">
-        <br><br>
-        <label>Jogador 5:</label>
-        <input type="text" maxlength="9" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador">
-        <br><br>
-        <input type="button" id="botao" value="Jogar">
+        <div id="interno_f">
+            <label class="labels_j">Jogador 1:</label>
+            <input type="text" maxlength="9" name="nome1" id="nome1" placeholder="Nome ou apelido do jogador">
+            <br><br>
+            <label class="labels_j">Jogador 2:</label>
+            <input type="text" maxlength="9" name="nome2" id="nome2" placeholder="Nome ou apelido do jogador">
+            <br><br>
+            <label class="labels_j">Jogador 3:</label>
+            <input type="text" maxlength="9" name="nome3" id="nome3" placeholder="Nome ou apelido do jogador">
+            <br><br>
+            <label class="labels_j">Jogador 4:</label>
+            <input type="text" maxlength="9" name="nome4" id="nome4" placeholder="Nome ou apelido do jogador">
+            <br><br>
+            <label class="labels_j">Jogador 5:</label>
+            <input type="text" maxlength="9" name="nome5" id="nome5" placeholder="Nome ou apelido do jogador">
+        </div>
+            <br><br>
+            <input type="button" id="botao" value="JOGAR">
     </form>
+        
+        <div id="q_jogadores" class="Regras">
+            <div id="titulo_jogadores">Quantidade de Jogadores</div>
+            <div id="quantidade_j">0</div>
+        </div>
 
     <div id="regras" class="Regras">
         <h2>Regras</h2><br>
-        <p>1. O jogo é composto por 5 jogadores.</p><br>
+        
+        <p>1. O jogo é composto por até 5 jogadores.</p><br>
 
         <p>2. Cada jogador irá sortear 3 dados na sua vez; após obter o 
             resultado nos dados, será necessário realizar uma conta utilizando 
