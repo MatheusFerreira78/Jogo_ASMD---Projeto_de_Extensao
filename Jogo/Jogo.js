@@ -556,11 +556,13 @@ btn_Iniciar.addEventListener("click", function(){
 	const titulo_2 = document.querySelector("#titulo_2");
 	const formulario = document.querySelector("#formulario");
 	const regras = document.querySelector("#regras");
+	const q_jogadores = document.querySelector("#q_jogadores");
 
 	titulo_1.hidden = true;
 	titulo_2.hidden = true;
 	formulario.hidden = true;
 	regras.hidden = true;
+	q_jogadores.hidden = true;
 
 	const titulo = document.querySelector("#D_titulo_principal");
 	const vez_jogadores = document.querySelector("#D_vez_jogadores");
@@ -689,3 +691,23 @@ function mostrar_pontos_placar(){
 	document.getElementById("nome_placar_5").textContent = jogador_5
 
 }
+
+const formulario = [...document.querySelector("#formulario")]
+
+var contador = 0
+
+formulario.map((elemento,indice)=>{
+	elemento.addEventListener("change", ()=>{
+		const novo_elemento = document.querySelector("#quantidade_j")
+
+		if (elemento.value != ""){
+			contador = contador + 1
+		} else {
+			contador = contador - 1
+		}
+		
+		novo_elemento.innerHTML = contador
+		console.log(novo_elemento)
+		console.log(indice + ":" + elemento.value)
+	})
+})
