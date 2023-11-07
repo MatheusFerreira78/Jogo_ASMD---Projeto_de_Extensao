@@ -3,7 +3,7 @@ var jogador_2 = 0;
 var jogador_3 = 0;
 var jogador_4 = 0;
 var jogador_5 = 0;
-var nome1, nome2, nome3, nome4, nome5;
+var nomes = [];
 var vez_jogador = 1;
 var resposta_Certa = 0;
 var contar_vez_rodar_dados = 0;
@@ -495,34 +495,32 @@ const vez = () => {
 
 //função para coletar os nomes dos jogadores e mostrar no console
 const pegarNOmes = () => {
-	nome1 = document.querySelector("#nome1").value;
-	nome2 = document.querySelector("#nome2").value;
-	nome3 = document.querySelector("#nome3").value;
-	nome4 = document.querySelector("#nome4").value;
-	nome5 = document.querySelector("#nome5").value;
+	const formulario = document.querySelectorAll("#formulario div input")
 
-	console.log(nome2);
-	console.log(nome3);
-	console.log(nome4);
-	console.log(nome5);
+	const nomes_formulario = [...formulario]
+
+	nomes_formulario.map((elemento,indice) => {
+		nomes[indice] = elemento.value
+	})
 }
 
 //função para mostrar os nomes dos jogadores na tela
 const mostrarNOmes = () => {
+	console.log(nomes)
 	if (vez_jogador == 1) {
-		document.getElementById("nome").textContent = nome1
+		document.getElementById("nome").textContent = nomes[0]
 		document.getElementById("nome").style.color = "#35b724"
 	} else if (vez_jogador == 2) {
-		document.getElementById("nome").textContent = nome2
+		document.getElementById("nome").textContent = nomes[1]
 		document.getElementById("nome").style.color = "#b22323"
 	} else if (vez_jogador == 3) {
-		document.getElementById("nome").textContent = nome3
+		document.getElementById("nome").textContent = nomes[2]
 		document.getElementById("nome").style.color = "#3b23b2"
 	} else if (vez_jogador == 4) {
-		document.getElementById("nome").textContent = nome4
+		document.getElementById("nome").textContent = nomes[3]
 		document.getElementById("nome").style.color = "#bb4708"
 	} else if (vez_jogador == 5) {
-		document.getElementById("nome").textContent = nome5
+		document.getElementById("nome").textContent = nomes[4]
 		document.getElementById("nome").style.color = "#a11896"
 	}
 }
@@ -553,20 +551,87 @@ verificar_constante();
 
 //função para mostrar a pontuação dos jogadores na tela
 const mostrar_pontos_placar = () => {
-	document.getElementById("nome_jogadores_1").textContent = nome1;
-	document.getElementById("nome_placar_1").textContent = jogador_1
 
-	document.getElementById("nome_jogadores_2").textContent = nome2;
-	document.getElementById("nome_placar_2").textContent = jogador_2
+	const tabela_placar_celulas = document.querySelectorAll("#placar tbody tr td")
 
-	document.getElementById("nome_jogadores_3").textContent = nome3;
-	document.getElementById("nome_placar_3").textContent = jogador_3
+	const tabela_placar_filtrada = [...tabela_placar_celulas].filter((el) => {
+		return el.className == "interior_tabela"
+	})
 
-	document.getElementById("nome_jogadores_4").textContent = nome4;
-	document.getElementById("nome_placar_4").textContent = jogador_4
+	switch (parseInt(document.getElementById("quantidade_j").innerHTML)) {
+		case 1:
+			document.getElementById("nome_jogadores_1").textContent = nomes[0];
+			document.getElementById("nome_placar_1").textContent = jogador_1
 
-	document.getElementById("nome_jogadores_5").textContent = nome5;
-	document.getElementById("nome_placar_5").textContent = jogador_5;
+			
+			for (let i = 9; i > 1; i--) {
+				tabela_placar_filtrada[i].remove()
+			}
+
+			break;
+
+		case 2:
+			document.getElementById("nome_jogadores_1").textContent = nomes[0];
+			document.getElementById("nome_placar_1").textContent = jogador_1
+
+			document.getElementById("nome_jogadores_2").textContent = nomes[1];
+			document.getElementById("nome_placar_2").textContent = jogador_2;
+
+			for (let i = 9; i > 3; i--) {
+				tabela_placar_filtrada[i].remove()
+			}
+			break;
+
+		case 3:
+			document.getElementById("nome_jogadores_1").textContent = nomes[0];
+			document.getElementById("nome_placar_1").textContent = jogador_1
+
+			document.getElementById("nome_jogadores_2").textContent = nomes[1];
+			document.getElementById("nome_placar_2").textContent = jogador_2
+
+			document.getElementById("nome_jogadores_3").textContent = nomes[2];
+			document.getElementById("nome_placar_3").textContent = jogador_3;
+
+			for (let i = 9; i > 5; i--) {
+				tabela_placar_filtrada[i].remove()
+			}
+			break;
+
+		case 4:
+			document.getElementById("nome_jogadores_1").textContent = nomes[0];
+			document.getElementById("nome_placar_1").textContent = jogador_1
+
+			document.getElementById("nome_jogadores_2").textContent = nomes[1];
+			document.getElementById("nome_placar_2").textContent = jogador_2
+
+			document.getElementById("nome_jogadores_3").textContent = nomes[2];
+			document.getElementById("nome_placar_3").textContent = jogador_3
+
+			document.getElementById("nome_jogadores_4").textContent = nomes[3];
+			document.getElementById("nome_placar_4").textContent = jogador_4;
+
+			for (let i = 9; i > 7; i--) {
+				tabela_placar_filtrada[i].remove()
+			}
+			break;
+
+		case 5:
+			document.getElementById("nome_jogadores_1").textContent = nomes[0];
+			document.getElementById("nome_placar_1").textContent = jogador_1
+
+			document.getElementById("nome_jogadores_2").textContent = nomes[1];
+			document.getElementById("nome_placar_2").textContent = jogador_2
+
+			document.getElementById("nome_jogadores_3").textContent = nomes[2];
+			document.getElementById("nome_placar_3").textContent = jogador_3
+
+			document.getElementById("nome_jogadores_4").textContent = nomes[3];
+			document.getElementById("nome_placar_4").textContent = jogador_4
+
+			document.getElementById("nome_jogadores_5").textContent = nomes[4];
+			document.getElementById("nome_placar_5").textContent = jogador_5;
+			break;
+	}
 }
 
 //função para verificar se os campos de nome estão vazios ou não e habilitar o botão de iniciar
@@ -590,6 +655,7 @@ const verificador_de_preenchimento_tela_inicial = () => {
 }
 verificador_de_preenchimento_tela_inicial();
 
+//função que recebe a quantidade de jogadores que irão jogar e prepara todo o game de adcordo com a quantidade
 const escolha_quantidade_jogadores = (q_jogadores) => {
 
 	const colunas_tabela_5 = [...document.getElementsByClassName("coluna 5")]
@@ -681,6 +747,7 @@ const escolha_quantidade_jogadores = (q_jogadores) => {
 	}
 }
 
+//função que realiza a movimentação das tampinhas de acordo com a quantidade de jogadores
 const movimentacao_tampinhas = () => {
 
 	const tampinha1 = document.querySelector("#tampinha_1")
@@ -1251,6 +1318,7 @@ const movimentacao_tampinhas = () => {
 	}
 }
 
+//função para movimentar as tampinhas para seu lugar no inicio do jogo
 const movimentar_tampinhas_inicio = () => {
 	const tampinha1 = document.querySelector("#tampinha_1")
 	const tampinha2 = document.querySelector("#tampinha_2")
@@ -1324,62 +1392,64 @@ const movimentar_tampinhas_inicio = () => {
 	}
 }
 
+//Um escutador de eventos no botão de iniciar o jogo que realiza uma serie de ações
 btn_Iniciar.addEventListener("click", () => {
-	
-		const q_jogadores =	parseInt(document.getElementById("quantidade_j").innerHTML)
 
-		if (q_jogadores == 0) {	
-			alert("NÃO É POSSÍVEL JOGAR SEM PELO MENOS 1 JOGADOR!!!")
-		} else {
-			const titulo_1 = document.querySelector("#titulo_1");
-			const titulo_2 = document.querySelector("#titulo_2");
-			const formulario = document.querySelector("#formulario");
-			const regras = document.querySelector("#regras");
-			const q_jogadores = document.querySelector("#q_jogadores");
-		
-			titulo_1.hidden = true;
-			titulo_2.hidden = true;
-			formulario.hidden = true;
-			regras.hidden = true;
-			q_jogadores.hidden = true;
-		
-			const titulo = document.querySelector("#D_titulo_principal");
-			const vez_jogadores = document.querySelector("#D_vez_jogadores");
-			const dados_jogadores = document.querySelector("#D_dados_jogadores");
-			const tabuleiro = document.querySelector("#D_tabuleiro_jogadores");
-			const tampinhas_jogadores = document.querySelector("#D_tampinhas_jogadores");
-			const btn_Verificar = document.querySelector("#D_botao_verificar");
-			const meuInput = document.querySelector("#D_campo_resposta");
-			const btn_botao_proximo = document.querySelector("#D_botao_proximo");
-			const btn_Rodar_dado = document.querySelector("#D_rodar_dado");
-			const nome_jogadores = document.querySelector("#D_nome_jogadores");
-			const placar = document.querySelector("#D_placar");
-		
-			btn_Iniciar.hidden = true;
-		
-			titulo.hidden = false;
-			vez_jogadores.hidden = false;
-			dados_jogadores.hidden = false;
-			tabuleiro.hidden = false;
-			tampinhas_jogadores.hidden = false;
-			btn_Verificar.hidden = false;
-			meuInput.hidden = false;
-			btn_botao_proximo.hidden = false;
-			btn_Rodar_dado.hidden = false;
-			nome_jogadores.hidden = false;
-			placar.hidden = false;
-		
-		
-			Iniciar_jogo();
-			pegarNOmes();
-			mostrarNOmes();
-			mostrar_pontos_placar();
-			escolha_quantidade_jogadores(q_jogadores);
-			movimentar_tampinhas_inicio();
-		}
+	const q_jogadores = parseInt(document.getElementById("quantidade_j").innerHTML)
+
+	if (q_jogadores == 0) {
+		alert("NÃO É POSSÍVEL JOGAR SEM PELO MENOS 1 JOGADOR!!!")
+	} else {
+		const titulo_1 = document.querySelector("#titulo_1");
+		const titulo_2 = document.querySelector("#titulo_2");
+		const formulario = document.querySelector("#formulario");
+		const regras = document.querySelector("#regras");
+		const q_jogadores = document.querySelector("#q_jogadores");
+
+		titulo_1.hidden = true;
+		titulo_2.hidden = true;
+		formulario.hidden = true;
+		regras.hidden = true;
+		q_jogadores.hidden = true;
+
+		const titulo = document.querySelector("#D_titulo_principal");
+		const vez_jogadores = document.querySelector("#D_vez_jogadores");
+		const dados_jogadores = document.querySelector("#D_dados_jogadores");
+		const tabuleiro = document.querySelector("#D_tabuleiro_jogadores");
+		const tampinhas_jogadores = document.querySelector("#D_tampinhas_jogadores");
+		const btn_Verificar = document.querySelector("#D_botao_verificar");
+		const meuInput = document.querySelector("#D_campo_resposta");
+		const btn_botao_proximo = document.querySelector("#D_botao_proximo");
+		const btn_Rodar_dado = document.querySelector("#D_rodar_dado");
+		const nome_jogadores = document.querySelector("#D_nome_jogadores");
+		const placar = document.querySelector("#D_placar");
+
+		btn_Iniciar.hidden = true;
+
+		titulo.hidden = false;
+		vez_jogadores.hidden = false;
+		dados_jogadores.hidden = false;
+		tabuleiro.hidden = false;
+		tampinhas_jogadores.hidden = false;
+		btn_Verificar.hidden = false;
+		meuInput.hidden = false;
+		btn_botao_proximo.hidden = false;
+		btn_Rodar_dado.hidden = false;
+		nome_jogadores.hidden = false;
+		placar.hidden = false;
+
+
+		Iniciar_jogo();
+		pegarNOmes();
+		mostrarNOmes();
+		mostrar_pontos_placar();
+		escolha_quantidade_jogadores(parseInt(document.getElementById("quantidade_j").innerHTML));
+		movimentar_tampinhas_inicio();
+	}
 })
 
-btn_Verificar.addEventListener("click",  (event) => {
+//Um escutador de eventos no botão de verificar que realiza a verificação da resposta e atualização dos pontos e nomes
+btn_Verificar.addEventListener("click", (event) => {
 	event.preventDefault();
 	verifcar_resposta();
 	vez();
@@ -1389,14 +1459,16 @@ btn_Verificar.addEventListener("click",  (event) => {
 	btn_Rodar_dado.hidden = false;
 });
 
-btn_botao_prox.addEventListener("click",  () => {
+//Um escutador de eventos no botão de proximo que pula para o proximo jogador
+btn_botao_prox.addEventListener("click", () => {
 	vez();
 	mostrarNOmes();
 
 	btn_Rodar_dado.hidden = false;
 })
 
-btn_Rodar_dado.addEventListener("click",  () => {
+//Um escutador de eventos que realiza a rolagem do dado e esconde o botão de rolar dado
+btn_Rodar_dado.addEventListener("click", () => {
 	Iniciar_jogo();
 
 	btn_Rodar_dado.hidden = true;
