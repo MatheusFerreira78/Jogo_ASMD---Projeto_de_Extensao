@@ -8,14 +8,21 @@ var vez_jogador = 1;
 var resposta_Certa = 0;
 var contar_vez_rodar_dados = 0;
 
-function Dado_aleatorio() {
+const btn_Iniciar = document.querySelector("#botao");
+const btn_Verificar = document.querySelector("#botao_resposta");
+const btn_botao_prox = document.querySelector("#botao_prox");
+const btn_Rodar_dado = document.querySelector("#rodar_dado");
+
+
+//função para gerar um numero aleatorio entre 1 e 6, representando as faces do dado e retornar o valor do dado
+const Dado_aleatorio = () => {
 	const random = Math.floor(Math.random() * 6) + 1;
 
 	return random;
 }
 
-function Operacao_aleatoria() {
-
+//função para gerar um numero aleatorio entre 1 e 4, representando as operações e retornar o valor da operação
+const Operacao_aleatoria = () => {
 	//numeros seguem a ordem: 1 = soma, 2 = subtração, 3 = multiplicação, 4 = divisão
 	//const operations = ['+', '-', '*', '/'];
 
@@ -25,10 +32,10 @@ function Operacao_aleatoria() {
 	const operacao = operations[randomIndex];
 
 	return operacao;
-
 }
 
-function Rodar_operacao_1(dado_1, dado_2) {
+//função para rodar a operação 1 e verificar se a divisão é exata ou não e retornar o valor da operação
+const Rodar_operacao_1 = (dado_1, dado_2) => {
 
 	var dado_1 = dado_1;
 	var dado_2 = dado_2;
@@ -59,8 +66,8 @@ function Rodar_operacao_1(dado_1, dado_2) {
 	return random;
 }
 
-function Rodar_operacao_2(resposta_1, dado_3) {
-
+//função para rodar a operação 2 e verificar se a divisão é exata ou não e retornar o valor da operação
+const Rodar_operacao_2 = (resposta_1, dado_3) => {
 	var resposta_1 = resposta_1;
 	var dado_3 = dado_3;
 
@@ -91,8 +98,8 @@ function Rodar_operacao_2(resposta_1, dado_3) {
 	return random;
 }
 
-function Rodar_dado_1() {
-
+//função para rodar o dado 1 e mostrar a face correspondente e retornar o valor do dado
+const Rodar_dado_1 = () => {
 	var random = Dado_aleatorio();
 
 	if (random == 1) {
@@ -117,8 +124,8 @@ function Rodar_dado_1() {
 	return random;
 }
 
-function Rodar_dado_2() {
-
+//função para rodar o dado 2 e mostrar a face correspondente e retornar o valor do dado
+const Rodar_dado_2 = () => {
 	var random = Dado_aleatorio();
 
 	if (random == 1) {
@@ -143,8 +150,8 @@ function Rodar_dado_2() {
 	return random;
 }
 
-function Rodar_dado_3() {
-
+//função para rodar o dado 3 e mostrar a face correspondente e retornar o valor do dado
+const Rodar_dado_3 = () => {
 	var random = Dado_aleatorio();
 
 	if (random == 1) {
@@ -169,243 +176,8 @@ function Rodar_dado_3() {
 	return random;
 }
 
-function Movimentar_tampinha_1() {
-
-	if (jogador_1 == 0) {
-		document.getElementById("tampinha_1").style.marginTop = "0px";
-	}
-	else if (jogador_1 == 1) {
-		document.getElementById("tampinha_1").style.marginTop = "-4%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 2) {
-		document.getElementById("tampinha_1").style.marginTop = "-8.5%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 3) {
-		document.getElementById("tampinha_1").style.marginTop = "-12.5%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 4) {
-		document.getElementById("tampinha_1").style.marginTop = "-17%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 5) {
-		document.getElementById("tampinha_1").style.marginTop = "-21%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 6) {
-		document.getElementById("tampinha_1").style.marginTop = "-25.5%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 7) {
-		document.getElementById("tampinha_1").style.marginTop = "-29.5%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 8) {
-		document.getElementById("tampinha_1").style.marginTop = "-33.5%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 9) {
-		document.getElementById("tampinha_1").style.marginTop = "-38%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_1 == 10) {
-		document.getElementById("tampinha_1").style.marginTop = "-42%";
-		document.getElementById("tampinha_1").style.marginLeft = "-0.2%";
-	}
-}
-
-function Movimentar_tampinha_2() {
-
-	if (jogador_2 == 0) {
-		document.getElementById("tampinha_2").style.marginTop = "0px";
-	}
-	else if (jogador_2 == 1) {
-		document.getElementById("tampinha_2").style.marginTop = "-4%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 2) {
-		document.getElementById("tampinha_2").style.marginTop = "-8.5%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 3) {
-		document.getElementById("tampinha_2").style.marginTop = "-12.5%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 4) {
-		document.getElementById("tampinha_2").style.marginTop = "-17%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 5) {
-		document.getElementById("tampinha_2").style.marginTop = "-21%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 6) {
-		document.getElementById("tampinha_2").style.marginTop = "-25.5%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 7) {
-		document.getElementById("tampinha_2").style.marginTop = "-29.5%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 8) {
-		document.getElementById("tampinha_2").style.marginTop = "-33.5%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 9) {
-		document.getElementById("tampinha_2").style.marginTop = "-38%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_2 == 10) {
-		document.getElementById("tampinha_2").style.marginTop = "-42%";
-		document.getElementById("tampinha_2").style.marginLeft = "-0.2%";
-	}
-}
-
-function Movimentar_tampinha_3() {
-
-	if (jogador_3 == 0) {
-		document.getElementById("tampinha_3").style.marginTop = "0px";
-	}
-	else if (jogador_3 == 1) {
-		document.getElementById("tampinha_3").style.marginTop = "-4%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 2) {
-		document.getElementById("tampinha_3").style.marginTop = "-8.5%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 3) {
-		document.getElementById("tampinha_3").style.marginTop = "-12.5%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 4) {
-		document.getElementById("tampinha_3").style.marginTop = "-17%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 5) {
-		document.getElementById("tampinha_3").style.marginTop = "-21%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 6) {
-		document.getElementById("tampinha_3").style.marginTop = "-25.5%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 7) {
-		document.getElementById("tampinha_3").style.marginTop = "-29.5%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 8) {
-		document.getElementById("tampinha_3").style.marginTop = "-33.5%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 9) {
-		document.getElementById("tampinha_3").style.marginTop = "-38%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_3 == 10) {
-		document.getElementById("tampinha_3").style.marginTop = "-42%";
-		document.getElementById("tampinha_3").style.marginLeft = "-0.2%";
-	}
-}
-
-function Movimentar_tampinha_4() {
-
-	if (jogador_4 == 0) {
-		document.getElementById("tampinha_4").style.marginTop = "0px";
-	}
-	else if (jogador_4 == 1) {
-		document.getElementById("tampinha_4").style.marginTop = "-4%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 2) {
-		document.getElementById("tampinha_4").style.marginTop = "-8.5%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 3) {
-		document.getElementById("tampinha_4").style.marginTop = "-12.5%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 4) {
-		document.getElementById("tampinha_4").style.marginTop = "-17%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 5) {
-		document.getElementById("tampinha_4").style.marginTop = "-21%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 6) {
-		document.getElementById("tampinha_4").style.marginTop = "-25.5%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 7) {
-		document.getElementById("tampinha_4").style.marginTop = "-29.5%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 8) {
-		document.getElementById("tampinha_4").style.marginTop = "-33.5%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 9) {
-		document.getElementById("tampinha_4").style.marginTop = "-38%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_4 == 10) {
-		document.getElementById("tampinha_4").style.marginTop = "-42%";
-		document.getElementById("tampinha_4").style.marginLeft = "-0.2%";
-	}
-}
-
-function Movimentar_tampinha_5() {
-
-	if (jogador_5 == 0) {
-		document.getElementById("tampinha_5").style.marginTop = "0px";
-	}
-	else if (jogador_5 == 1) {
-		document.getElementById("tampinha_5").style.marginTop = "-4%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 2) {
-		document.getElementById("tampinha_5").style.marginTop = "-8.5%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 3) {
-		document.getElementById("tampinha_5").style.marginTop = "-12.5%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 4) {
-		document.getElementById("tampinha_5").style.marginTop = "-17%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 5) {
-		document.getElementById("tampinha_5").style.marginTop = "-21%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 6) {
-		document.getElementById("tampinha_5").style.marginTop = "-25.5%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 7) {
-		document.getElementById("tampinha_5").style.marginTop = "-29.5%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 8) {
-		document.getElementById("tampinha_5").style.marginTop = "-33.5%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 9) {
-		document.getElementById("tampinha_5").style.marginTop = "-38%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-	else if (jogador_5 == 10) {
-		document.getElementById("tampinha_5").style.marginTop = "-42%";
-		document.getElementById("tampinha_5").style.marginLeft = "-0.2%";
-	}
-}
-
-function calcular(dado1, dado2, dado3, operacao1, operacao2) {
-
+//função para calcular o resultado das operações e retornar o resultado final (Resposta correta)
+const calcular = (dado1, dado2, dado3, operacao1, operacao2) => {
 	var dado_1 = dado1;
 	var dado_2 = dado2;
 	var dado_3 = dado3;
@@ -451,8 +223,9 @@ function calcular(dado1, dado2, dado3, operacao1, operacao2) {
 	return reposta_correta;
 }
 
-function Iniciar_jogo() {
-
+/*função para iniciar o jogo e chamar as funções Rodar_dado_1, Rodar_dado_2, Rodar_dado_3, 
+Rodar_operacao_1, Rodar_operacao_2 e calcular e selecionar a tampa 1 caso seja a vez do jogador 1*/
+const Iniciar_jogo = () => {
 	var dado_1 = Rodar_dado_1();
 	var dado_2 = Rodar_dado_2();
 	var dado_3 = Rodar_dado_3();
@@ -477,81 +250,1080 @@ function Iniciar_jogo() {
 
 	resposta_Certa = calcular(dado_1, dado_2, dado_3, operacao_1, operacao_2);
 
-	if(vez_jogador == 1){
+	if (vez_jogador == 1) {
 		document.querySelector("#tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
 	}
-
 }
 
-function verifcar_resposta() {
-
+/*função para verificar se a resposta digitada pelo usuario é igual a resposta correta e mostrar 
+uma mensagem de resposta certa ou errada*/
+const verifcar_resposta = () => {
 	const resposta = document.querySelector("#resposta");
 
 	var valor = resposta.value;
 	console.log("Valor digitado pelo usuario: ", valor);
 
-	if (valor == resposta_Certa) {
-		console.log("Resposta certa");
-		alert("Resposta certa");
-		resposta.value = "";
-		if (vez_jogador == 1) {
-			jogador_1 = jogador_1 + 1;
-			Movimentar_tampinha_1();
-		} else if (vez_jogador == 2) {
-			jogador_2 = jogador_2 + 1;
-			Movimentar_tampinha_2();
-		} else if (vez_jogador == 3) {
-			jogador_3 = jogador_3 + 1;
-			Movimentar_tampinha_3();
-		} else if (vez_jogador == 4) {
-			jogador_4 = jogador_4 + 1;
-			Movimentar_tampinha_4();
-		} else if (vez_jogador == 5) {
-			jogador_5 = jogador_5 + 1;
-			Movimentar_tampinha_5();
-		}
-		Iniciar_jogo();
+	const quantidade_jogadores = parseInt(document.getElementById("quantidade_j").innerHTML)
+
+	switch (quantidade_jogadores) {
+
+		case 1:
+			if (valor == resposta_Certa) {
+				console.log("Resposta certa");
+				alert("Resposta certa");
+				resposta.value = "";
+				jogador_1 = jogador_1 + 1;
+				movimentacao_tampinhas();
+				Iniciar_jogo();
+			} else {
+				console.log("Resposta errada");
+				alert("Resposta errada");
+				resposta.value = "";
+			}
+
+			break;
+
+		case 2:
+			if (valor == resposta_Certa) {
+				console.log("Resposta certa");
+				alert("Resposta certa");
+				resposta.value = "";
+				if (vez_jogador == 1) {
+					jogador_1 = jogador_1 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 2) {
+					jogador_2 = jogador_2 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				}
+
+			} else {
+				console.log("Resposta errada");
+				alert("Resposta errada");
+				resposta.value = "";
+			}
+
+			break;
+
+		case 3:
+			if (valor == resposta_Certa) {
+				console.log("Resposta certa");
+				alert("Resposta certa");
+				resposta.value = "";
+				if (vez_jogador == 1) {
+					jogador_1 = jogador_1 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 2) {
+					jogador_2 = jogador_2 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 3) {
+					jogador_3 = jogador_3 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				}
+
+			} else {
+				console.log("Resposta errada");
+				alert("Resposta errada");
+				resposta.value = "";
+			}
+
+			break;
+
+		case 4:
+			if (valor == resposta_Certa) {
+				console.log("Resposta certa");
+				alert("Resposta certa");
+				resposta.value = "";
+				if (vez_jogador == 1) {
+					jogador_1 = jogador_1 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 2) {
+					jogador_2 = jogador_2 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 3) {
+					jogador_3 = jogador_3 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 4) {
+					jogador_4 = jogador_4 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				}
+
+			} else {
+				console.log("Resposta errada");
+				alert("Resposta errada");
+				resposta.value = "";
+			}
+
+			break;
+
+		case 5:
+			if (valor == resposta_Certa) {
+				console.log("Resposta certa");
+				alert("Resposta certa");
+				resposta.value = "";
+				if (vez_jogador == 1) {
+					jogador_1 = jogador_1 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 2) {
+					jogador_2 = jogador_2 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 3) {
+					jogador_3 = jogador_3 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 4) {
+					jogador_4 = jogador_4 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				} else if (vez_jogador == 5) {
+					jogador_5 = jogador_5 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				}
+
+			} else {
+				console.log("Resposta errada");
+				alert("Resposta errada");
+				resposta.value = "";
+			}
+
+			break;
+	}
+}
+
+//função para verificar a vez do jogador e mostrar a tampa correspondente
+const vez = () => {
+	const quantidade_jogadores = parseInt(document.getElementById("quantidade_j").innerHTML)
+
+	switch (quantidade_jogadores) {
+
+		case 1:
+			vez_jogador = 1;
+
+			document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+
+			const btn_nao_sei = document.querySelector("#botao_prox");
+			btn_nao_sei.addEventListener("click", () => {
+				Iniciar_jogo();
+			})
+
+			console.log("Vez do jogador: ", vez_jogador);
+
+			break;
+
+		case 2:
+			if (vez_jogador == 1) {
+				vez_jogador = 2;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+			} else if (vez_jogador == 2) {
+				vez_jogador = 1;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+			}
+
+			console.log("Vez do jogador: ", vez_jogador);
+
+			break;
+
+		case 3:
+			if (vez_jogador == 1) {
+				vez_jogador = 2;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+			} else if (vez_jogador == 2) {
+				vez_jogador = 3;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+			} else if (vez_jogador == 3) {
+				vez_jogador = 1;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+			}
+
+			console.log("Vez do jogador: ", vez_jogador);
+
+			break;
+
+		case 4:
+			if (vez_jogador == 1) {
+				vez_jogador = 2;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+			} else if (vez_jogador == 2) {
+				vez_jogador = 3;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+			} else if (vez_jogador == 3) {
+				vez_jogador = 4;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+			} else if (vez_jogador == 4) {
+				vez_jogador = 1;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+			}
+
+			console.log("Vez do jogador: ", vez_jogador);
+
+			break;
+
+		case 5:
+			if (vez_jogador == 1) {
+				vez_jogador = 2;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+			} else if (vez_jogador == 2) {
+				vez_jogador = 3;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+			} else if (vez_jogador == 3) {
+				vez_jogador = 4;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+			} else if (vez_jogador == 4) {
+				vez_jogador = 5;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+			} else if (vez_jogador == 5) {
+				vez_jogador = 1;
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+			}
+
+			console.log("Vez do jogador: ", vez_jogador);
+
+			break;
+	}
+}
+
+const pegarNOmes = () => {
+	nome1 = document.querySelector("#nome1").value;
+	nome2 = document.querySelector("#nome2").value;
+	nome3 = document.querySelector("#nome3").value;
+	nome4 = document.querySelector("#nome4").value;
+	nome5 = document.querySelector("#nome5").value;
+
+	console.log(nome2);
+	console.log(nome3);
+	console.log(nome4);
+	console.log(nome5);
+}
+
+const mostrarNOmes = () => {
+	if (vez_jogador == 1) {
+		document.getElementById("nome").textContent = nome1
+		document.getElementById("nome").style.color = "#35b724"
+	} else if (vez_jogador == 2) {
+		document.getElementById("nome").textContent = nome2
+		document.getElementById("nome").style.color = "#b22323"
+	} else if (vez_jogador == 3) {
+		document.getElementById("nome").textContent = nome3
+		document.getElementById("nome").style.color = "#3b23b2"
+	} else if (vez_jogador == 4) {
+		document.getElementById("nome").textContent = nome4
+		document.getElementById("nome").style.color = "#bb4708"
+	} else if (vez_jogador == 5) {
+		document.getElementById("nome").textContent = nome5
+		document.getElementById("nome").style.color = "#a11896"
+	}
+}
+
+const verificarCampo = () => {
+
+	const meuInput = document.querySelector("#resposta");
+	const btn_Verificar = document.querySelector("#botao_resposta");
+
+	if (meuInput.value.trim() === '') {
+		btn_Verificar.disabled = true;
 	} else {
-		console.log("Resposta errada");
-		alert("Resposta errada");
-		resposta.value = "";
+		btn_Verificar.disabled = false;
 	}
 }
 
-function vez(){
+const verificar_constante = () => {
+	// adicona um ouvinte de evento para o evento de entrada no campo de texto
+	const meuInput = document.querySelector("#resposta");
+	meuInput.addEventListener('input', verificarCampo);
 
-	vez_jogador = vez_jogador + 1;
+	// Use um loop de verificação a cada 500 milissegundos (meio segundo)
+	setInterval(verificarCampo, 500);
+}
 
-	if(vez_jogador == 6){
-		vez_jogador = 1;
-	}
-	
-	console.log("Vez do jogador: ", vez_jogador);
-	
-	if(vez_jogador == 1){
-		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
-	}
-	else if(vez_jogador == 2){
-		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
-	}
-	else if(vez_jogador == 3){
-		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
-	}
-	else if(vez_jogador == 4){
-		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
-	}
-	else if(vez_jogador == 5){
-		document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+verificar_constante();
+
+const mostrar_pontos_placar = () => {
+	document.getElementById("nome_jogadores_1").textContent = nome1;
+	document.getElementById("nome_placar_1").textContent = jogador_1
+
+	document.getElementById("nome_jogadores_2").textContent = nome2;
+	document.getElementById("nome_placar_2").textContent = jogador_2
+
+	document.getElementById("nome_jogadores_3").textContent = nome3;
+	document.getElementById("nome_placar_3").textContent = jogador_3
+
+	document.getElementById("nome_jogadores_4").textContent = nome4;
+	document.getElementById("nome_placar_4").textContent = jogador_4
+
+	document.getElementById("nome_jogadores_5").textContent = nome5;
+	document.getElementById("nome_placar_5").textContent = jogador_5;
+
+}
+
+const verificador_de_preenchimento_tela_inicial = () => {
+	const formulario = [...document.querySelector("#formulario")]
+
+	var contador = 0
+
+	formulario.map((elemento) => {
+		elemento.addEventListener("change", () => {
+			const novo_elemento = document.querySelector("#quantidade_j")
+
+			if (elemento.value != "") {
+				contador = contador + 1
+			} else {
+				contador = contador - 1
+			}
+
+			novo_elemento.innerHTML = contador
+		})
+	})
+}
+
+verificador_de_preenchimento_tela_inicial();
+
+const escolha_quantidade_jogadores = (q_jogadores) => {
+
+	const colunas_tabela_5 = [...document.getElementsByClassName("coluna 5")]
+	const colunas_tabela_4 = [...document.getElementsByClassName("coluna 4")]
+	const colunas_tabela_3 = [...document.getElementsByClassName("coluna 3")]
+	const colunas_tabela_2 = [...document.getElementsByClassName("coluna 2")]
+
+	const tampinha5 = document.querySelector("#tampinha_5")
+	const tampinha4 = document.querySelector("#tampinha_4")
+	const tampinha3 = document.querySelector("#tampinha_3")
+	const tampinha2 = document.querySelector("#tampinha_2")
+
+	switch (q_jogadores) {
+
+		case 1:
+			colunas_tabela_5.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha5.remove()
+
+			colunas_tabela_4.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha4.remove()
+
+			colunas_tabela_3.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha3.remove()
+
+			colunas_tabela_2.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha2.remove()
+
+			break;
+
+		case 2:
+			colunas_tabela_5.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha5.remove()
+
+			colunas_tabela_4.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha4.remove()
+
+			colunas_tabela_3.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha3.remove()
+
+			break;
+
+		case 3:
+			colunas_tabela_5.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha5.remove()
+
+			colunas_tabela_4.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha4.remove()
+
+			break;
+
+		case 4:
+			colunas_tabela_5.map((elemento, indice) => {
+				elemento.remove()
+			})
+
+			tampinha5.remove()
+
+			break;
+
+		default:
+			break;
 	}
 }
 
-const btn_Iniciar = document.querySelector("#botao");
-const btn_Verificar = document.querySelector("#botao_resposta");
-const btn_botao_prox = document.querySelector("#botao_prox");
-const btn_Rodar_dado = document.querySelector("#rodar_dado");
+const movimentacao_tampinhas = () => {
 
-btn_Iniciar.addEventListener("click", function(){
-	
+	const tampinha1 = document.querySelector("#tampinha_1")
+	const tampinha2 = document.querySelector("#tampinha_2")
+	const tampinha3 = document.querySelector("#tampinha_3")
+	const tampinha4 = document.querySelector("#tampinha_4")
+	const tampinha5 = document.querySelector("#tampinha_5")
+
+	const quantidade_jogadores = parseInt(document.getElementById("quantidade_j").innerHTML)
+
+
+	switch (quantidade_jogadores) {
+
+		case 1:
+			if (jogador_1 == 0) {
+				tampinha1.style.marginTop = "0%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 1) {
+				tampinha1.style.marginTop = "-4%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 2) {
+				tampinha1.style.marginTop = "-8.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 3) {
+				tampinha1.style.marginTop = "-12.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 4) {
+				tampinha1.style.marginTop = "-16.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 5) {
+				tampinha1.style.marginTop = "-20.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 6) {
+				tampinha1.style.marginTop = "-24.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 7) {
+				tampinha1.style.marginTop = "-28.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 8) {
+				tampinha1.style.marginTop = "-32.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 9) {
+				tampinha1.style.marginTop = "-36.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+			else if (jogador_1 == 10) {
+				tampinha1.style.marginTop = "-40.2%";
+				tampinha1.style.marginLeft = "12%";
+			}
+
+			break;
+
+		case 2:
+			if (jogador_1 == 0) {
+				tampinha1.style.marginTop = "0%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 1) {
+				tampinha1.style.marginTop = "-4%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 2) {
+				tampinha1.style.marginTop = "-8.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 3) {
+				tampinha1.style.marginTop = "-12.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 4) {
+				tampinha1.style.marginTop = "-16.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 5) {
+				tampinha1.style.marginTop = "-20.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 6) {
+				tampinha1.style.marginTop = "-24.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 7) {
+				tampinha1.style.marginTop = "-28.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 8) {
+				tampinha1.style.marginTop = "-32.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 9) {
+				tampinha1.style.marginTop = "-36.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			} else if (jogador_1 == 10) {
+				tampinha1.style.marginTop = "-40.2%";
+				tampinha1.style.marginLeft = "4.5%";
+			}
+
+			if (jogador_2 == 0) {
+				tampinha2.style.marginTop = "0%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 1) {
+				tampinha2.style.marginTop = "-4%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 2) {
+				tampinha2.style.marginTop = "-8.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 3) {
+				tampinha2.style.marginTop = "-12.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 4) {
+				tampinha2.style.marginTop = "-16.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 5) {
+				tampinha2.style.marginTop = "-20.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 6) {
+				tampinha2.style.marginTop = "-24.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 7) {
+				tampinha2.style.marginTop = "-28.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 8) {
+				tampinha2.style.marginTop = "-32.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 9) {
+				tampinha2.style.marginTop = "-36.2%";
+				tampinha2.style.marginLeft = "14%";
+			} else if (jogador_2 == 10) {
+				tampinha2.style.marginTop = "-40.2%";
+				tampinha2.style.marginLeft = "14%";
+			}
+
+			break;
+
+		case 3:
+			if (jogador_1 == 0) {
+				tampinha1.style.marginTop = "0%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 1) {
+				tampinha1.style.marginTop = "-4%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 2) {
+				tampinha1.style.marginTop = "-8.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 3) {
+				tampinha1.style.marginTop = "-12.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 4) {
+				tampinha1.style.marginTop = "-16.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 5) {
+				tampinha1.style.marginTop = "-20.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 6) {
+				tampinha1.style.marginTop = "-24.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 7) {
+				tampinha1.style.marginTop = "-28.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 8) {
+				tampinha1.style.marginTop = "-32.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 9) {
+				tampinha1.style.marginTop = "-36.2%";
+				tampinha1.style.marginLeft = "2%";
+			} else if (jogador_1 == 10) {
+				tampinha1.style.marginTop = "-40.2%";
+				tampinha1.style.marginLeft = "2%";
+			}
+
+			if (jogador_2 == 0) {
+				tampinha2.style.marginTop = "0%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 1) {
+				tampinha2.style.marginTop = "-4%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 2) {
+				tampinha2.style.marginTop = "-8.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 3) {
+				tampinha2.style.marginTop = "-12.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 4) {
+				tampinha2.style.marginTop = "-16.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 5) {
+				tampinha2.style.marginTop = "-20.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 6) {
+				tampinha2.style.marginTop = "-24.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 7) {
+				tampinha2.style.marginTop = "-28.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 8) {
+				tampinha2.style.marginTop = "-32.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 9) {
+				tampinha2.style.marginTop = "-36.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			} else if (jogador_2 == 10) {
+				tampinha2.style.marginTop = "-40.2%";
+				tampinha2.style.marginLeft = "6.2%";
+			}
+
+			if (jogador_3 == 0) {
+				tampinha3.style.marginTop = "0%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 1) {
+				tampinha3.style.marginTop = "-4%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 2) {
+				tampinha3.style.marginTop = "-8.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 3) {
+				tampinha3.style.marginTop = "-12.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 4) {
+				tampinha3.style.marginTop = "-16.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 5) {
+				tampinha3.style.marginTop = "-20.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 6) {
+				tampinha3.style.marginTop = "-24.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 7) {
+				tampinha3.style.marginTop = "-28.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 8) {
+				tampinha3.style.marginTop = "-32.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 9) {
+				tampinha3.style.marginTop = "-36.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			} else if (jogador_3 == 10) {
+				tampinha3.style.marginTop = "-40.2%";
+				tampinha3.style.marginLeft = "10.5%";
+			}
+
+			break;
+
+			break;
+
+		case 4:
+			if (jogador_1 == 0) {
+				tampinha1.style.marginTop = "0%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 1) {
+				tampinha1.style.marginTop = "-4%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 2) {
+				tampinha1.style.marginTop = "-8.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 3) {
+				tampinha1.style.marginTop = "-12.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 4) {
+				tampinha1.style.marginTop = "-16.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 5) {
+				tampinha1.style.marginTop = "-20.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 6) {
+				tampinha1.style.marginTop = "-24.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 7) {
+				tampinha1.style.marginTop = "-28.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 8) {
+				tampinha1.style.marginTop = "-32.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 9) {
+				tampinha1.style.marginTop = "-36.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			} else if (jogador_1 == 10) {
+				tampinha1.style.marginTop = "-40.2%";
+				tampinha1.style.marginLeft = "0.6%";
+			}
+
+			if (jogador_2 == 0) {
+				tampinha2.style.marginTop = "0%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 1) {
+				tampinha2.style.marginTop = "-4%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 2) {
+				tampinha2.style.marginTop = "-8.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 3) {
+				tampinha2.style.marginTop = "-12.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 4) {
+				tampinha2.style.marginTop = "-16.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 5) {
+				tampinha2.style.marginTop = "-20.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 6) {
+				tampinha2.style.marginTop = "-24.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 7) {
+				tampinha2.style.marginTop = "-28.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 8) {
+				tampinha2.style.marginTop = "-32.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 9) {
+				tampinha2.style.marginTop = "-36.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			} else if (jogador_2 == 10) {
+				tampinha2.style.marginTop = "-40.2%";
+				tampinha2.style.marginLeft = "2.3%";
+			}
+
+			if (jogador_3 == 0) {
+				tampinha3.style.marginTop = "0%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 1) {
+				tampinha3.style.marginTop = "-4%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 2) {
+				tampinha3.style.marginTop = "-8.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 3) {
+				tampinha3.style.marginTop = "-12.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 4) {
+				tampinha3.style.marginTop = "-16.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 5) {
+				tampinha3.style.marginTop = "-20.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 6) {
+				tampinha3.style.marginTop = "-24.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 7) {
+				tampinha3.style.marginTop = "-28.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 8) {
+				tampinha3.style.marginTop = "-32.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 9) {
+				tampinha3.style.marginTop = "-36.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			} else if (jogador_3 == 10) {
+				tampinha3.style.marginTop = "-40.2%";
+				tampinha3.style.marginLeft = "3.8%";
+			}
+
+			if (jogador_4 == 0) {
+				tampinha4.style.marginTop = "0%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 1) {
+				tampinha4.style.marginTop = "-4%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 2) {
+				tampinha4.style.marginTop = "-8.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 3) {
+				tampinha4.style.marginTop = "-12.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 4) {
+				tampinha4.style.marginTop = "-16.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 5) {
+				tampinha4.style.marginTop = "-20.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 6) {
+				tampinha4.style.marginTop = "-24.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 7) {
+				tampinha4.style.marginTop = "-28.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 8) {
+				tampinha4.style.marginTop = "-32.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 9) {
+				tampinha4.style.marginTop = "-36.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			} else if (jogador_4 == 10) {
+				tampinha4.style.marginTop = "-40.2%";
+				tampinha4.style.marginLeft = "5.6%";
+			}
+
+			break;
+
+		case 5:
+			if (jogador_1 == 0) {
+				tampinha1.style.marginTop = "0%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 1) {
+				tampinha1.style.marginTop = "-4%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 2) {
+				tampinha1.style.marginTop = "-8.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 3) {
+				tampinha1.style.marginTop = "-12.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 4) {
+				tampinha1.style.marginTop = "-16.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 5) {
+				tampinha1.style.marginTop = "-20.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 6) {
+				tampinha1.style.marginTop = "-24.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 7) {
+				tampinha1.style.marginTop = "-28.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 8) {
+				tampinha1.style.marginTop = "-32.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 9) {
+				tampinha1.style.marginTop = "-36.2%";
+				tampinha1.style.marginLeft = "0%";
+			} else if (jogador_1 == 10) {
+				tampinha1.style.marginTop = "-40.2%";
+				tampinha1.style.marginLeft = "0%";
+			}
+
+			if (jogador_2 == 0) {
+				tampinha2.style.marginTop = "0%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 1) {
+				tampinha2.style.marginTop = "-4%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 2) {
+				tampinha2.style.marginTop = "-8.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 3) {
+				tampinha2.style.marginTop = "-12.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 4) {
+				tampinha2.style.marginTop = "-16.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 5) {
+				tampinha2.style.marginTop = "-20.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 6) {
+				tampinha2.style.marginTop = "-24.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 7) {
+				tampinha2.style.marginTop = "-28.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 8) {
+				tampinha2.style.marginTop = "-32.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 9) {
+				tampinha2.style.marginTop = "-36.2%";
+				tampinha2.style.marginLeft = "0%";
+			} else if (jogador_2 == 10) {
+				tampinha2.style.marginTop = "-40.2%";
+				tampinha2.style.marginLeft = "0%";
+			}
+
+			if (jogador_3 == 0) {
+				tampinha3.style.marginTop = "0%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 1) {
+				tampinha3.style.marginTop = "-4%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 2) {
+				tampinha3.style.marginTop = "-8.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 3) {
+				tampinha3.style.marginTop = "-12.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 4) {
+				tampinha3.style.marginTop = "-16.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 5) {
+				tampinha3.style.marginTop = "-20.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 6) {
+				tampinha3.style.marginTop = "-24.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 7) {
+				tampinha3.style.marginTop = "-28.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 8) {
+				tampinha3.style.marginTop = "-32.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 9) {
+				tampinha3.style.marginTop = "-36.2%";
+				tampinha3.style.marginLeft = "0%";
+			} else if (jogador_3 == 10) {
+				tampinha3.style.marginTop = "-40.2%";
+				tampinha3.style.marginLeft = "0%";
+			}
+
+			if (jogador_4 == 0) {
+				tampinha4.style.marginTop = "0%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 1) {
+				tampinha4.style.marginTop = "-4%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 2) {
+				tampinha4.style.marginTop = "-8.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 3) {
+				tampinha4.style.marginTop = "-12.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 4) {
+				tampinha4.style.marginTop = "-16.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 5) {
+				tampinha4.style.marginTop = "-20.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 6) {
+				tampinha4.style.marginTop = "-24.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 7) {
+				tampinha4.style.marginTop = "-28.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 8) {
+				tampinha4.style.marginTop = "-32.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 9) {
+				tampinha4.style.marginTop = "-36.2%";
+				tampinha4.style.marginLeft = "0%";
+			} else if (jogador_4 == 10) {
+				tampinha4.style.marginTop = "-40.2%";
+				tampinha4.style.marginLeft = "0%";
+			}
+
+			if (jogador_5 == 0) {
+				tampinha5.style.marginTop = "0%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 1) {
+				tampinha5.style.marginTop = "-4%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 2) {
+				tampinha5.style.marginTop = "-8.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 3) {
+				tampinha5.style.marginTop = "-12.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 4) {
+				tampinha5.style.marginTop = "-16.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 5) {
+				tampinha5.style.marginTop = "-20.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 6) {
+				tampinha5.style.marginTop = "-24.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 7) {
+				tampinha5.style.marginTop = "-28.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 8) {
+				tampinha5.style.marginTop = "-32.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 9) {
+				tampinha5.style.marginTop = "-36.2%";
+				tampinha5.style.marginLeft = "0%";
+			} else if (jogador_5 == 10) {
+				tampinha5.style.marginTop = "-40.2%";
+				tampinha5.style.marginLeft = "0%";
+			}
+
+			break;
+
+		default:
+			break;
+	}
+}
+
+const movimentar_tampinhas_inicio = () => {
+	const tampinha1 = document.querySelector("#tampinha_1")
+	const tampinha2 = document.querySelector("#tampinha_2")
+	const tampinha3 = document.querySelector("#tampinha_3")
+	const tampinha4 = document.querySelector("#tampinha_4")
+	const tampinha5 = document.querySelector("#tampinha_5")
+
+	const quantidade_jogadores = parseInt(document.getElementById("quantidade_j").innerHTML)
+
+	switch (quantidade_jogadores) {
+
+		case 1:
+			tampinha1.style.marginTop = "0%";
+			tampinha1.style.marginLeft = "12%";
+
+			break;
+
+		case 2:
+			tampinha1.style.marginTop = "0%";
+			tampinha1.style.marginLeft = "4.5%";
+
+			tampinha2.style.marginTop = "0%";
+			tampinha2.style.marginLeft = "14%";
+
+			break;
+
+		case 3:
+			tampinha1.style.marginTop = "0%";
+			tampinha1.style.marginLeft = "2%";
+
+			tampinha2.style.marginTop = "0%";
+			tampinha2.style.marginLeft = "6.2%";
+
+			tampinha3.style.marginTop = "0%";
+			tampinha3.style.marginLeft = "10.5%";
+
+			break;
+
+		case 4:
+			tampinha1.style.marginTop = "0%";
+			tampinha1.style.marginLeft = "0.6%";
+
+			tampinha2.style.marginTop = "0%";
+			tampinha2.style.marginLeft = "2.3%";
+
+			tampinha3.style.marginTop = "0%";
+			tampinha3.style.marginLeft = "3.8%";
+
+			tampinha4.style.marginTop = "0%";
+			tampinha4.style.marginLeft = "5.6%";
+
+			break;
+
+		case 5:
+			tampinha1.style.marginTop = "0%";
+			tampinha1.style.marginLeft = "0%";
+
+			tampinha2.style.marginTop = "0%";
+			tampinha2.style.marginLeft = "0%";
+
+			tampinha3.style.marginTop = "0%";
+			tampinha3.style.marginLeft = "0%";
+
+			tampinha4.style.marginTop = "0%";
+			tampinha4.style.marginLeft = "0%";
+
+			tampinha5.style.marginTop = "0%";
+			tampinha5.style.marginLeft = "0%";
+
+			break;
+	}
+}
+
+btn_Iniciar.addEventListener("click", () => {
+
 	const titulo_1 = document.querySelector("#titulo_1");
 	const titulo_2 = document.querySelector("#titulo_2");
 	const formulario = document.querySelector("#formulario");
@@ -590,13 +1362,16 @@ btn_Iniciar.addEventListener("click", function(){
 	nome_jogadores.hidden = false;
 	placar.hidden = false;
 
+
 	Iniciar_jogo();
 	pegarNOmes();
 	mostrarNOmes();
 	mostrar_pontos_placar();
+	escolha_quantidade_jogadores(parseInt(document.getElementById("quantidade_j").innerHTML));
+	movimentar_tampinhas_inicio();
 });
 
-btn_Verificar.addEventListener("click", function(event){
+btn_Verificar.addEventListener("click",  (event) => {
 	event.preventDefault();
 	verifcar_resposta();
 	vez();
@@ -606,108 +1381,15 @@ btn_Verificar.addEventListener("click", function(event){
 	btn_Rodar_dado.hidden = false;
 });
 
-btn_botao_prox.addEventListener("click", function(){
+btn_botao_prox.addEventListener("click",  () => {
 	vez();
 	mostrarNOmes();
 
 	btn_Rodar_dado.hidden = false;
 })
 
-btn_Rodar_dado.addEventListener("click", function(){
+btn_Rodar_dado.addEventListener("click",  () => {
 	Iniciar_jogo();
 
 	btn_Rodar_dado.hidden = true;
-})
-
-function verificarCampo() {
-
-	const meuInput = document.querySelector("#resposta");
-	const btn_Verificar = document.querySelector("#botao_resposta");
-
-	if (meuInput.value.trim() === '') {
-	btn_Verificar.disabled = true;
-	} else {
-	btn_Verificar.disabled = false;
-	}
-}
-
-// adicona um ouvinte de evento para o evento de entrada no campo de texto
-const meuInput = document.querySelector("#resposta");
-meuInput.addEventListener('input', verificarCampo);
-
-// Use um loop de verificação a cada 500 milissegundos (meio segundo)
-setInterval(verificarCampo, 500);
-
-function pegarNOmes(){
-
-	nome1 = document.querySelector("#nome1").value;
-	nome2 = document.querySelector("#nome2").value;
-	nome3 = document.querySelector("#nome3").value;
-	nome4 = document.querySelector("#nome4").value;
-	nome5 = document.querySelector("#nome5").value;
-	
-	console.log(nome1);
-	console.log(nome2);
-	console.log(nome3);
-	console.log(nome4);
-	console.log(nome5);
-}
-
-function mostrarNOmes(){
-
-	if(vez_jogador == 1){
-		document.getElementById("nome").textContent = nome1
-		document.getElementById("nome").style.color = "#35b724"
-	} else if (vez_jogador == 2){
-		document.getElementById("nome").textContent = nome2
-		document.getElementById("nome").style.color = "#b22323"
-	} else if (vez_jogador == 3){
-		document.getElementById("nome").textContent = nome3
-		document.getElementById("nome").style.color = "#3b23b2"
-	} else if (vez_jogador == 4){
-		document.getElementById("nome").textContent = nome4
-		document.getElementById("nome").style.color = "#bb4708"
-	} else if (vez_jogador == 5){
-		document.getElementById("nome").textContent = nome5
-		document.getElementById("nome").style.color = "#a11896"
-	}
-}
-
-function mostrar_pontos_placar(){
-	
-	document.getElementById("nome_jogadores_1").textContent = nome1;
-	document.getElementById("nome_placar_1").textContent = jogador_1
-
-	document.getElementById("nome_jogadores_2").textContent = nome2;
-	document.getElementById("nome_placar_2").textContent = jogador_2
-
-	document.getElementById("nome_jogadores_3").textContent = nome3;
-	document.getElementById("nome_placar_3").textContent = jogador_3
-
-	document.getElementById("nome_jogadores_4").textContent = nome4;
-	document.getElementById("nome_placar_4").textContent = jogador_4
-
-	document.getElementById("nome_jogadores_5").textContent = nome5;
-	document.getElementById("nome_placar_5").textContent = jogador_5
-
-}
-
-const formulario = [...document.querySelector("#formulario")]
-
-var contador = 0
-
-formulario.map((elemento,indice)=>{
-	elemento.addEventListener("change", ()=>{
-		const novo_elemento = document.querySelector("#quantidade_j")
-
-		if (elemento.value != ""){
-			contador = contador + 1
-		} else {
-			contador = contador - 1
-		}
-		
-		novo_elemento.innerHTML = contador
-		console.log(novo_elemento)
-		console.log(indice + ":" + elemento.value)
-	})
 })

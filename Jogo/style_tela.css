@@ -10,7 +10,7 @@ body{
 .titulo1{
     position: absolute;
     top: 45%;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 46px;
     color: rgb(253, 253, 90);
@@ -22,7 +22,7 @@ body{
 .titulo2{
     position: absolute;
     top: 55%;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: rgb(253, 253, 90);
@@ -57,6 +57,7 @@ form{
     height: 8%;
     background-color: rgb(86, 29, 132);
     color: rgb(253, 253, 90);
+    border: 3px solid black;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
@@ -64,10 +65,14 @@ form{
     font-family: 'Serif';
 }
 
+#botao:hover{
+    border: none;
+}
+
 .Regras{
     transform: translate(-50%, -50%);
     background-color: rgb(253, 253, 90);
-    width: 500px;
+    width: 400px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
@@ -78,7 +83,7 @@ form{
     padding: 0px;
     position: absolute;
     top: 75%;
-    left: 17%;
+    left: 15%;
     width: 13%;
     height: 25%;
     justify-content: center;
@@ -111,7 +116,7 @@ form{
 #regras{
     position: absolute;
     top: 30%;
-    left: 17%;
+    left: 15%;
 }
 
 .labels_j{
