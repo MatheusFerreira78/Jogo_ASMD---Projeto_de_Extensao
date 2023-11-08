@@ -1,182 +1,227 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: rgb(86, 29, 132);
+body {
+  background-color: rgb(86, 29, 132);
 }
 
-.titulo1{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 46px;
-    color: rgb(253, 253, 90);
-    font-family: 'Serif';
-    font-size: 75px;
-    text-align: center;
+.titulo1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  color: rgb(253, 253, 90);
+  font-family: "Serif";
+  font-size: 75px;
+  text-align: center;
 }
 
-.titulo2{
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: rgb(253, 253, 90);
-    font-family: 'Serif';
-    text-align: center;
+.titulo2 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: rgb(253, 253, 90);
+  font-family: "Serif";
+  text-align: center;
 }
 
-form{
-    position: absolute;
-    top: 50%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(253, 253, 90);
-    width: 400px;
-    height: 750px;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+form {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(253, 253, 90);
+  width: 400px;
+  height: 750px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
 }
 
-#interno_f{
-    position: absolute;
-    top: 20%;
-    width: 370px;
+#interno_f {
+  position: absolute;
+  top: 20%;
+  width: 370px;
 }
 
-#botao{
-    position: absolute;
-    top: 85%;
-    left: 5.5%;
-    width: 90%;
-    height: 8%;
-    background-color: rgb(86, 29, 132);
-    color: rgb(253, 253, 90);
-    border: 3px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 38px;
-    font-family: 'Serif';
+#botao_jogar {
+  position: absolute;
+  top: 82%;
+  left: 16%;
 }
 
-#botao:hover{
-    border: none;
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 300px;
 }
 
-.Regras{
-    transform: translate(-50%, -50%);
-    background-color: rgb(253, 253, 90);
-    width: 400px;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
-    font-family: 'arial';
+.button p {
+  color: rgb(253, 253, 90);
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(110, 37, 170);
+  display: block;
+  position: relative;
+  padding: 20px 40px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 rgb(231, 231, 124),
+    0 10px 0 rgb(73, 26, 111);
+  -moz-box-shadow: inset 0 1px 0 rgb(231, 231, 124), 0 10px 0 rgb(73, 26, 111);
+  box-shadow: inset 0 1px 0 rgb(231, 231, 124), 0 10px 0 rgb(73, 26, 111);
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#q_jogadores{
-    padding: 0px;
-    position: absolute;
-    top: 75%;
-    left: 15%;
-    width: 13%;
-    height: 25%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.button p:active {
+  top: 10px;
+  background-color: rgb(86, 29, 132);
+
+  -webkit-box-shadow: inset 0 1px 0 rgb(231, 231, 124),
+    inset 0 -3px 0 rgb(73, 26, 111);
+  -moz-box-shadow: inset 0 1px 0 rgb(231, 231, 124),
+    inset 0 -3pxpx 0 rgb(73, 26, 111);
+  box-shadow: inset 0 1px 0 rgb(14, 14, 14), inset 0 -3px 0 rgb(73, 26, 111);
 }
 
-#titulo_jogadores{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 10%;
-    font-size: 25px;
-    font-weight: bold;
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#quantidade_j{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    position: relative;
-    top: 50%;
+.Regras {
+  transform: translate(-50%, -50%);
+  background-color: rgb(253, 253, 90);
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  font-family: "arial";
 }
 
-#regras{
-    position: absolute;
-    top: 30%;
-    left: 15%;
+#q_jogadores {
+  padding: 0px;
+  position: absolute;
+  top: 75%;
+  left: 15%;
+  width: 13%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.labels_j{
-    font-size: 20px;
+#titulo_jogadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.sub_titulo{
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    width: 400px;
-    transform: translate(-50%, -50%);
-    font-size: 45px;
-    color: #000000;
-    font-family: 'Serif';
-    font-weight: 800;
-    text-align: center;
+#quantidade_j {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  position: relative;
+  top: 50%;
 }
 
+#regras {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
 
-input{
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 20px;
-    border: none;
-    border-bottom: 1px solid #000000;
-    outline: none;
+.labels_j {
+  font-size: 20px;
+}
+
+.sub_titulo {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: #000000;
+  font-family: "Serif";
+  font-weight: 800;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
 }
 
 /* Cor de fundo do input, da letra, definindo sem bordas e o ponteiro do mouse a "mãozinha"*/
-input[type="submit"]{
-    background-color: #711fb4;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+input[type="submit"] {
+  background-color: #711fb4;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 /* Cor de fundo do input quando passar o mouse em cima */
-input[type="submit"]:hover{
-    background-color: #000000;
+input[type="submit"]:hover {
+  background-color: #000000;
 }
 
 /* Tirar a borda do input quando tiver ativado/clicado */
-input[type="submit"]:active{
-    border: none;
+input[type="submit"]:active {
+  border: none;
 }
 
 /* Cor de fundo do input */
-input[type="text"]{
-    background-color: rgb(253, 253, 90);
+input[type="text"] {
+  background-color: rgb(253, 253, 90);
 }
-
 
 /* Cor de fundo do autocomplete */
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px rgb(253, 253, 90) inset;
+  -webkit-box-shadow: 0 0 0 30px rgb(253, 253, 90) inset;
 }
 
 /* Cor do texto do autocomplete */
 input:-webkit-autofill {
-    -webkit-text-fill-color: rgb(3, 3, 3) !important;
+  -webkit-text-fill-color: rgb(3, 3, 3) !important;
 }

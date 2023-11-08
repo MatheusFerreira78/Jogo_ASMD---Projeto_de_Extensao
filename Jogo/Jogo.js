@@ -8,7 +8,7 @@ var vez_jogador = 1;
 var resposta_Certa = 0;
 var contar_vez_rodar_dados = 0;
 
-const btn_Iniciar = document.querySelector("#botao");
+const btn_Iniciar = document.querySelector("#botao_jogar");
 const btn_Verificar = document.querySelector("#botao_resposta");
 const btn_botao_prox = document.querySelector("#botao_prox");
 const btn_Rodar_dado = document.querySelector("#rodar_dado");
