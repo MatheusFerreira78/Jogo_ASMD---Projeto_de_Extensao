@@ -502,7 +502,11 @@ const pegarNOmes = () => {
 	const nomes_formulario = [...formulario]
 
 	nomes_formulario.map((elemento, indice) => {
-		nomes[indice] = elemento.value
+		if(elemento.value == "") {
+			elemento.value = "Jogador " + (indice + 1)
+		} else {
+			nomes[indice] = elemento.value
+		}
 	})
 }
 
@@ -1493,7 +1497,7 @@ const verificar_campos_formulario = () => {
 				contador = contador - 1;
 			}
 			console.log(contador)
-			
+
 			if (contador == 1) {
 				btn_Iniciar.removeAttribute("disabled");
 			} else {
