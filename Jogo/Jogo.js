@@ -214,12 +214,12 @@ const calcular = (dado1, dado2, dado3, operacao1, operacao2) => {
 		reposta_correta = resultado_1_conta / dado_3;
 	}
 
-	console.log("Valor dado 1:", dado_1);
-	console.log("Operação [1 = soma , 2 = subtração, 3 = multiplicação, 4 = divisão];", operacao_1);
-	console.log("Valor dado 2:", dado_2);
-	console.log("Resultado de dado 1 com dado 2: ", resultado_1_conta);
-	console.log("Operação [1 = soma , 2 = subtração, 3 = multiplicação, 4 = divisão];", operacao_2);
-	console.log("Valor dado 3:", dado_3);
+	// console.log("Valor dado 1:", dado_1);
+	// console.log("Operação [1 = soma , 2 = subtração, 3 = multiplicação, 4 = divisão];", operacao_1);
+	// console.log("Valor dado 2:", dado_2);
+	// console.log("Resultado de dado 1 com dado 2: ", resultado_1_conta);
+	// console.log("Operação [1 = soma , 2 = subtração, 3 = multiplicação, 4 = divisão];", operacao_2);
+	// console.log("Valor dado 3:", dado_3);
 	console.log("Resultado de dados 1,2 com dado 3: ", reposta_correta);
 
 	return reposta_correta;
@@ -513,7 +513,6 @@ const pegarNOmes = () => {
 
 //função para mostrar os nomes dos jogadores na tela
 const mostrarNOmes = () => {
-	console.log(nomes)
 	if (vez_jogador == 1) {
 		document.getElementById("nome").textContent = nomes[0]
 		document.getElementById("nome").style.color = "#35b724"
@@ -562,7 +561,7 @@ const mostrar_pontos_placar = () => {
 	const tabela_placar_celulas = document.querySelectorAll("#placar tbody tr td")
 
 	const tabela_placar_filtrada = [...tabela_placar_celulas].filter((el) => {
-		return el.className == "interior_tabela"
+		return el.classList.contains("interior_tabela")
 	})
 
 	switch (parseInt(document.getElementById("quantidade_j").innerHTML)) {
@@ -572,7 +571,7 @@ const mostrar_pontos_placar = () => {
 
 
 			for (let i = 9; i > 1; i--) {
-				tabela_placar_filtrada[i].remove()
+				tabela_placar_filtrada[i].hidden = true
 			}
 
 			break;
@@ -585,7 +584,7 @@ const mostrar_pontos_placar = () => {
 			document.getElementById("nome_placar_2").textContent = jogador_2;
 
 			for (let i = 9; i > 3; i--) {
-				tabela_placar_filtrada[i].remove()
+				tabela_placar_filtrada[i].hidden = true
 			}
 			break;
 
@@ -600,7 +599,7 @@ const mostrar_pontos_placar = () => {
 			document.getElementById("nome_placar_3").textContent = jogador_3;
 
 			for (let i = 9; i > 5; i--) {
-				tabela_placar_filtrada[i].remove()
+				tabela_placar_filtrada[i].hidden = true
 			}
 			break;
 
@@ -618,7 +617,7 @@ const mostrar_pontos_placar = () => {
 			document.getElementById("nome_placar_4").textContent = jogador_4;
 
 			for (let i = 9; i > 7; i--) {
-				tabela_placar_filtrada[i].remove()
+				tabela_placar_filtrada[i].hidden = true
 			}
 			break;
 
@@ -639,6 +638,30 @@ const mostrar_pontos_placar = () => {
 			document.getElementById("nome_placar_5").textContent = jogador_5;
 			break;
 	}
+	
+	const array_pontuacao_elementos = tabela_placar_filtrada.filter((el,i) => {
+		if(i % 2 != 0) {
+			return el
+		}
+	})
+
+	let array_pontos = []
+
+	array_pontuacao_elementos.map((el,indice) => {
+		array_pontos[indice] = parseInt(el.innerHTML)
+	})
+
+	console.log(array_pontos)
+
+	const array_nomes = tabela_placar_filtrada.filter((el,i) => {
+		if(i % 2 == 0) {
+			return el
+		}
+	})
+
+	console.log(array_nomes)
+
+	console.log(array_pontuacao_elementos)
 }
 
 //função para verificar se os campos de nome estão vazios ou não e habilitar o botão de iniciar
@@ -1497,7 +1520,6 @@ const verificar_campos_formulario = () => {
 			} else {
 				contador = contador - 1;
 			}
-			console.log(contador)
 
 			if (contador > 0) {
 				btn_Iniciar.removeAttribute("disabled");
