@@ -5,9 +5,9 @@ O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade o
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
 <div align="center">
-  <img src="Jogo/results/tela_incial.png" width="500">&emsp;
-  <img src="Jogo/results/tela_insercao_jogadores.png" width="500">&emsp;
-  <img src="Jogo/results/tela_jogo.png" width="500">&emsp;
+  <img src="Jogo/results/tela_incial.png" width="1000">&emsp;
+  <img src="Jogo/results/tela_insercao_jogadores.png" width="1000">&emsp;
+  <img src="Jogo/results/tela_jogo.png" width="1000">&emsp;
 </div>
 
 ## Tecnologias Utilizadas
@@ -19,8 +19,9 @@ O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade o
 - Implementação de dados 3D;
 - Placar interativo;
 
-## Author
+## Authors
 Matheus Vinicius Ferreira e Silva (follow me on [Linkedin](https://www.linkedin.com/in/matheus-vinicius-ferreira-e-silva-518b061b0))
+
 
 ## License
 ```
