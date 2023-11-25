@@ -20,7 +20,7 @@ O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade o
 - Placar interativo;
 
 ## Authors
-Matheus Vinicius Ferreira e Silva (follow me on [Linkedin](https://www.linkedin.com/in/matheus-vinicius-ferreira-e-silva-518b061b0))
+Matheus Vinicius Ferreira e Silva (follow me on [Linkedin](https://www.linkedin.com/in/matheus-vinicius-ferreira-e-silva-518b061b0))<br>
 Carlos Felipe Barbosa
 
 
