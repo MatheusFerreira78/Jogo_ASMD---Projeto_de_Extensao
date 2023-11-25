@@ -242,6 +242,20 @@ input:-webkit-autofill {
     transform: translateY(0);
   }
   50% {
-    transform: translateX(30px); /* Distância para baixo */
+    transform: translateX(30px);  /*Distância para baixo*/
   }
+} 
+
+/* .movimentar-elemento {
+  position: relative;
+  animation: mover 2s ease-in-out 1 forwards;
 }
+
+@keyframes mover {
+  from {
+      transform: translate(0, 0);
+  }
+  to {
+      transform: translate(0, 30px);
+  }
+} */
