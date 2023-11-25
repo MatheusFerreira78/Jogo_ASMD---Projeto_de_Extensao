@@ -4,7 +4,9 @@ O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade o
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="Jogo/results/tela_incial.png" width="500">&emsp;<img src="Jogo/results/tela_insercao_jogadores.png" width="500">&emsp;<img src="Jogo/results/tela_jogo.png" width="500">
+<div align="center">
+  <img src="Jogo/results/tela_incial.png" width="500">&emsp;<img src="Jogo/results/tela_insercao_jogadores.png" width="500">&emsp;<img src="Jogo/results/tela_jogo.png" width="500">  
+</div>
 
 ## Tecnologias Utilizadas
 * HTML
