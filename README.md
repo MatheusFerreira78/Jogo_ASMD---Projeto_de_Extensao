@@ -1,6 +1,6 @@
 # Jogo ASMD (Adição-Subtração-Multiplicação-Divisão)
 
-O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade onde foi desenvolvido um jogo digital e matemático para crianças do 4º e 5º ano.
+O jogo ASMD foi uma criação a partir de um projeto de extensão na faculdade onde foi desenvolvido um jogo digital e matemático para crianças do 5º e 6º ano.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
