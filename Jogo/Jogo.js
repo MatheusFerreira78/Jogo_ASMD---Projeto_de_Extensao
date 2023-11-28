@@ -1757,20 +1757,64 @@ const colocacao_jogadores = () => {
 const verificar_ganhador = () => {
 	if (jogador_1 >= 10) {
 		Swal.fire({
-			title: 'Parabéns',
-			text: 'O jogador ' + nomes[0] + ' ganhou o jogo',
-			icon: 'success',
-			confirmButtonText: 'Ok'
+			title: 'Parabéns!! O jogador ' + nomes[0] + ' ganhou o jogo',
+			background: '#711fb4',
+			color: 'rgb(253, 253, 90',
+			grow: 'fullscreen',
+			confirmButtonText: 'Continuar jogando',
+			confirmButtonColor: '#711fb4',
+			customClass: {
+				title: 'aumentar_texto_alert_titulo',
+			}
 		})
-		alert("O jogador " + nomes[0] + " ganhou o jogo");
 	} else if (jogador_2 >= 10) {
-		alert("O jogador " + nomes[1] + " ganhou o jogo");
+		Swal.fire({
+			title: 'Parabéns!! O jogador ' + nomes[1] + ' ganhou o jogo',
+			background: '#711fb4',
+			color: 'rgb(253, 253, 90',
+			grow: 'fullscreen',
+			confirmButtonText: 'Continuar jogando',
+			confirmButtonColor: '#711fb4',
+			customClass: {
+				title: 'aumentar_texto_alert_titulo',
+			}
+		})
 	} else if (jogador_3 >= 10) {
-		alert("O jogador " + nomes[2] + " ganhou o jogo");
+		Swal.fire({
+			title: 'Parabéns!! O jogador ' + nomes[2] + ' ganhou o jogo',
+			background: '#711fb4',
+			color: 'rgb(253, 253, 90',
+			grow: 'fullscreen',
+			confirmButtonText: 'Continuar jogando',
+			confirmButtonColor: '#711fb4',
+			customClass: {
+				title: 'aumentar_texto_alert_titulo',
+			}
+		})
 	} else if (jogador_4 >= 10) {
-		alert("O jogador " + nomes[3] + " ganhou o jogo");
+		Swal.fire({
+			title: 'Parabéns!! O jogador ' + nomes[3] + ' ganhou o jogo',
+			background: '#711fb4',
+			color: 'rgb(253, 253, 90',
+			grow: 'fullscreen',
+			confirmButtonText: 'Continuar jogando',
+			confirmButtonColor: '#711fb4',
+			customClass: {
+				title: 'aumentar_texto_alert_titulo',
+			}
+		})
 	} else if (jogador_5 >= 10) {
-		alert("O jogador " + nomes[4] + " ganhou o jogo");
+		Swal.fire({
+			title: 'Parabéns!! O jogador ' + nomes[4] + ' ganhou o jogo',
+			background: '#711fb4',
+			color: 'rgb(253, 253, 90',
+			grow: 'fullscreen',
+			confirmButtonText: 'Continuar jogando',
+			confirmButtonColor: '#711fb4',
+			customClass: {
+				title: 'aumentar_texto_alert_titulo',
+			}
+		})
 	}	
 }
 
@@ -1778,7 +1822,7 @@ const alert_btn_prox = () => {
 	
 	Swal.fire({
 		title: 'Você passou a vez!',
-		icon: 'error',
+		icon: 'info',
 		timer: 4000,
 		background: '#711fb4',
 		color: 'rgb(253, 253, 90',
@@ -1848,10 +1892,10 @@ btn_Iniciar.addEventListener("click", () => {
 btn_Verificar.addEventListener("click", (event) => {
 	event.preventDefault();
 	verifcar_resposta();
-	verificar_ganhador();
-	vez();
-	mostrarNOmes();
-	mostrar_pontos_placar();
+	setTimeout(verificar_ganhador, 4000);
+	setTimeout(vez, 4000);
+	setTimeout(mostrarNOmes, 4000);
+	setTimeout(mostrar_pontos_placar, 4000);
 
 	btn_Rodar_dado.hidden = false;
 });
@@ -1859,8 +1903,8 @@ btn_Verificar.addEventListener("click", (event) => {
 //Um escutador de eventos no botão de proximo que pula para o proximo jogador
 btn_botao_prox.addEventListener("click", () => {
 	alert_btn_prox();
-	vez();
-	mostrarNOmes();
+	setTimeout(vez, 4000);
+	setTimeout(mostrarNOmes, 4000);
 
 	btn_Rodar_dado.hidden = false;
 })
