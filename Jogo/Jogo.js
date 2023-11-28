@@ -272,7 +272,15 @@ const verifcar_resposta = () => {
 		case 1:
 			if (valor == resposta_Certa) {
 				console.log("Resposta certa");
-				alert("Resposta certa");
+				Swal.fire({
+					title: 'Resposta certa!',
+					text: 'Você avançou uma casa!',
+					icon: 'success',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 				if (jogador_1 < 10) {
 					jogador_1 = jogador_1 + 1;
@@ -281,7 +289,15 @@ const verifcar_resposta = () => {
 				}
 			} else {
 				console.log("Resposta errada");
-				alert("Resposta errada");
+				Swal.fire({
+					title: 'Resposta errada!',
+					text: 'Pense melhor na próxima!',
+					icon: 'error',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 			}
 
@@ -290,7 +306,15 @@ const verifcar_resposta = () => {
 		case 2:
 			if (valor == resposta_Certa) {
 				console.log("Resposta certa");
-				alert("Resposta certa");
+				Swal.fire({
+					title: 'Resposta certa!',
+					text: 'Você avançou uma casa!',
+					icon: 'success',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 				if (vez_jogador == 1) {
 					if (jogador_1 < 10) {
@@ -308,7 +332,15 @@ const verifcar_resposta = () => {
 
 			} else {
 				console.log("Resposta errada");
-				alert("Resposta errada");
+				Swal.fire({
+					title: 'Resposta errada!',
+					text: 'Pense melhor na próxima!',
+					icon: 'error',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 			}
 
@@ -317,7 +349,16 @@ const verifcar_resposta = () => {
 		case 3:
 			if (valor == resposta_Certa) {
 				console.log("Resposta certa");
-				alert("Resposta certa");
+				Swal.fire({
+					title: 'Resposta certa!',
+					text: 'Você avançou uma casa!',
+					icon: 'success',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+
+				})
 				resposta.value = "";
 				if (vez_jogador == 1) {
 					if (jogador_1 < 10) {
@@ -341,7 +382,15 @@ const verifcar_resposta = () => {
 
 			} else {
 				console.log("Resposta errada");
-				alert("Resposta errada");
+				Swal.fire({
+					title: 'Resposta errada!',
+					text: 'Pense melhor na próxima!',
+					icon: 'error',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 			}
 
@@ -350,7 +399,15 @@ const verifcar_resposta = () => {
 		case 4:
 			if (valor == resposta_Certa) {
 				console.log("Resposta certa");
-				alert("Resposta certa");
+				Swal.fire({
+					title: 'Resposta certa!',
+					text: 'Você avançou uma casa!',
+					icon: 'success',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 				if (vez_jogador == 1) {
 					if (jogador_1 < 10) {
@@ -380,7 +437,15 @@ const verifcar_resposta = () => {
 
 			} else {
 				console.log("Resposta errada");
-				alert("Resposta errada");
+				Swal.fire({
+					title: 'Resposta errada!',
+					text: 'Pense melhor na próxima!',
+					icon: 'error',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 			}
 
@@ -389,7 +454,15 @@ const verifcar_resposta = () => {
 		case 5:
 			if (valor == resposta_Certa) {
 				console.log("Resposta certa");
-				alert("Resposta certa");
+				Swal.fire({
+					title: 'Resposta certa!',
+					text: 'Você avançou uma casa!',
+					icon: 'success',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 				if (vez_jogador == 1) {
 					if (jogador_1 < 10) {
@@ -425,7 +498,15 @@ const verifcar_resposta = () => {
 
 			} else {
 				console.log("Resposta errada");
-				alert("Resposta errada");
+				Swal.fire({
+					title: 'Resposta errada!',
+					text: 'Pense melhor na próxima!',
+					icon: 'error',
+					timer: 4000,
+					background: '#711fb4',
+					color: 'rgb(253, 253, 90',
+					showConfirmButton: false,
+				})
 				resposta.value = "";
 			}
 
@@ -1673,6 +1754,38 @@ const colocacao_jogadores = () => {
 
 }
 
+const verificar_ganhador = () => {
+	if (jogador_1 >= 10) {
+		Swal.fire({
+			title: 'Parabéns',
+			text: 'O jogador ' + nomes[0] + ' ganhou o jogo',
+			icon: 'success',
+			confirmButtonText: 'Ok'
+		})
+		alert("O jogador " + nomes[0] + " ganhou o jogo");
+	} else if (jogador_2 >= 10) {
+		alert("O jogador " + nomes[1] + " ganhou o jogo");
+	} else if (jogador_3 >= 10) {
+		alert("O jogador " + nomes[2] + " ganhou o jogo");
+	} else if (jogador_4 >= 10) {
+		alert("O jogador " + nomes[3] + " ganhou o jogo");
+	} else if (jogador_5 >= 10) {
+		alert("O jogador " + nomes[4] + " ganhou o jogo");
+	}	
+}
+
+const alert_btn_prox = () => {
+	
+	Swal.fire({
+		title: 'Você passou a vez!',
+		icon: 'error',
+		timer: 4000,
+		background: '#711fb4',
+		color: 'rgb(253, 253, 90',
+		showConfirmButton: false,
+	})
+}
+
 //Um escutador de eventos no botão de iniciar o jogo que realiza uma serie de ações
 btn_Iniciar.addEventListener("click", () => {
 
@@ -1735,6 +1848,7 @@ btn_Iniciar.addEventListener("click", () => {
 btn_Verificar.addEventListener("click", (event) => {
 	event.preventDefault();
 	verifcar_resposta();
+	verificar_ganhador();
 	vez();
 	mostrarNOmes();
 	mostrar_pontos_placar();
@@ -1744,6 +1858,7 @@ btn_Verificar.addEventListener("click", (event) => {
 
 //Um escutador de eventos no botão de proximo que pula para o proximo jogador
 btn_botao_prox.addEventListener("click", () => {
+	alert_btn_prox();
 	vez();
 	mostrarNOmes();
 
