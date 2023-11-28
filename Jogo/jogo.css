@@ -281,3 +281,10 @@ body{
 #placar_interno_tabela{
     text-align: center;
 }
+
+.aumentar_texto_alert_titulo{
+    font-size: 150px;
+    align-items: center;
+    text-align: center;
+
+}
