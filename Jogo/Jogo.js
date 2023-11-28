@@ -1,4 +1,4 @@
-let jogador_1 = 0;	
+let jogador_1 = 0;
 let jogador_2 = 0;
 let jogador_3 = 0;				//variaveis para armazenar as pontuações dos jogadores 1 ao 5
 let jogador_4 = 0;
@@ -274,9 +274,11 @@ const verifcar_resposta = () => {
 				console.log("Resposta certa");
 				alert("Resposta certa");
 				resposta.value = "";
-				jogador_1 = jogador_1 + 1;
-				movimentacao_tampinhas();
-				Iniciar_jogo();
+				if (jogador_1 < 10) {
+					jogador_1 = jogador_1 + 1;
+					movimentacao_tampinhas();
+					Iniciar_jogo();
+				}
 			} else {
 				console.log("Resposta errada");
 				alert("Resposta errada");
@@ -291,13 +293,17 @@ const verifcar_resposta = () => {
 				alert("Resposta certa");
 				resposta.value = "";
 				if (vez_jogador == 1) {
-					jogador_1 = jogador_1 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_1 < 10) {
+						jogador_1 = jogador_1 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 2) {
-					jogador_2 = jogador_2 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_2 < 10) {
+						jogador_2 = jogador_2 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				}
 
 			} else {
@@ -314,17 +320,23 @@ const verifcar_resposta = () => {
 				alert("Resposta certa");
 				resposta.value = "";
 				if (vez_jogador == 1) {
-					jogador_1 = jogador_1 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_1 < 10) {
+						jogador_1 = jogador_1 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 2) {
-					jogador_2 = jogador_2 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_2 < 10) {
+						jogador_2 = jogador_2 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 3) {
-					jogador_3 = jogador_3 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_3 < 10) {
+						jogador_3 = jogador_3 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				}
 
 			} else {
@@ -341,21 +353,29 @@ const verifcar_resposta = () => {
 				alert("Resposta certa");
 				resposta.value = "";
 				if (vez_jogador == 1) {
-					jogador_1 = jogador_1 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_1 < 10) {
+						jogador_1 = jogador_1 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 2) {
-					jogador_2 = jogador_2 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_2 < 10) {
+						jogador_2 = jogador_2 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 3) {
-					jogador_3 = jogador_3 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_3 < 10) {
+						jogador_3 = jogador_3 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 4) {
-					jogador_4 = jogador_4 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_4 < 10) {
+						jogador_4 = jogador_4 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				}
 
 			} else {
@@ -372,25 +392,35 @@ const verifcar_resposta = () => {
 				alert("Resposta certa");
 				resposta.value = "";
 				if (vez_jogador == 1) {
-					jogador_1 = jogador_1 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_1 < 10) {
+						jogador_1 = jogador_1 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 2) {
-					jogador_2 = jogador_2 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_2 < 10) {
+						jogador_2 = jogador_2 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 3) {
-					jogador_3 = jogador_3 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_3 < 10) {
+						jogador_3 = jogador_3 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 4) {
-					jogador_4 = jogador_4 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_4 < 10) {
+						jogador_4 = jogador_4 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				} else if (vez_jogador == 5) {
-					jogador_5 = jogador_5 + 1;
-					movimentacao_tampinhas();
-					Iniciar_jogo();
+					if (jogador_5 < 10) {
+						jogador_5 = jogador_5 + 1;
+						movimentacao_tampinhas();
+						Iniciar_jogo();
+					}
 				}
 
 			} else {
@@ -410,14 +440,14 @@ const vez = () => {
 	switch (quantidade_jogadores) {
 
 		case 1:
-			vez_jogador = 1;
+			if (jogador_1 < 10) {
+				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
 
-			document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
-
-			const btn_nao_sei = document.querySelector("#botao_prox");
-			btn_nao_sei.addEventListener("click", () => {
-				Iniciar_jogo();
-			})
+				const btn_nao_sei = document.querySelector("#botao_prox");
+				btn_nao_sei.addEventListener("click", () => {
+					Iniciar_jogo();
+				})
+			}
 
 			console.log("Vez do jogador: ", vez_jogador);
 
@@ -425,11 +455,15 @@ const vez = () => {
 
 		case 2:
 			if (vez_jogador == 1) {
-				vez_jogador = 2;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				}
 			} else if (vez_jogador == 2) {
-				vez_jogador = 1;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				}
 			}
 
 			console.log("Vez do jogador: ", vez_jogador);
@@ -438,14 +472,29 @@ const vez = () => {
 
 		case 3:
 			if (vez_jogador == 1) {
-				vez_jogador = 2;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				}
 			} else if (vez_jogador == 2) {
-				vez_jogador = 3;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				}
 			} else if (vez_jogador == 3) {
-				vez_jogador = 1;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				}
 			}
 
 			console.log("Vez do jogador: ", vez_jogador);
@@ -454,17 +503,49 @@ const vez = () => {
 
 		case 4:
 			if (vez_jogador == 1) {
-				vez_jogador = 2;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				}
 			} else if (vez_jogador == 2) {
-				vez_jogador = 3;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				}
 			} else if (vez_jogador == 3) {
-				vez_jogador = 4;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				}
 			} else if (vez_jogador == 4) {
-				vez_jogador = 1;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				}
 			}
 
 			console.log("Vez do jogador: ", vez_jogador);
@@ -473,20 +554,75 @@ const vez = () => {
 
 		case 5:
 			if (vez_jogador == 1) {
-				vez_jogador = 2;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				} else if (jogador_5 < 10) {
+					vez_jogador = 5;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+				}
 			} else if (vez_jogador == 2) {
-				vez_jogador = 3;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				} else if (jogador_5 < 10) {
+					vez_jogador = 5;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				}
 			} else if (vez_jogador == 3) {
+				if (jogador_4 < 10) {
 				vez_jogador = 4;
 				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				} else if (jogador_5 < 10) {
+					vez_jogador = 5;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				}
 			} else if (vez_jogador == 4) {
-				vez_jogador = 5;
-				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+				if (jogador_5 < 10) {
+					vez_jogador = 5;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-5.png'/>";
+				} else if (jogador_1 < 10) {
+					vez_jogador = 1;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				}
 			} else if (vez_jogador == 5) {
+				if (jogador_1 < 10) {
 				vez_jogador = 1;
 				document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-1.png'/>";
+				} else if (jogador_2 < 10) {
+					vez_jogador = 2;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-2.png'/>";
+				} else if (jogador_3 < 10) {
+					vez_jogador = 3;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-3.png'/>";
+				} else if (jogador_4 < 10) {
+					vez_jogador = 4;
+					document.getElementById("tampa").innerHTML = "<img src='tampa-de-garrafa-4.png'/>";
+				}
 			}
 
 			console.log("Vez do jogador: ", vez_jogador);
@@ -638,30 +774,30 @@ const mostrar_pontos_placar = () => {
 			document.getElementById("nome_placar_5").textContent = jogador_5;
 			break;
 	}
-	
-	const array_pontuacao_elementos = tabela_placar_filtrada.filter((el,i) => {
-		if(i % 2 != 0) {
+
+	const array_pontuacao_elementos = tabela_placar_filtrada.filter((el, i) => {
+		if (i % 2 != 0) {
 			return el
 		}
 	})
 
 	let array_pontos = []
 
-	array_pontuacao_elementos.map((el,indice) => {
+	array_pontuacao_elementos.map((el, indice) => {
 		array_pontos[indice] = parseInt(el.innerHTML)
 	})
 
-	console.log(array_pontos)
+	// console.log(array_pontos)
 
-	const array_nomes = tabela_placar_filtrada.filter((el,i) => {
-		if(i % 2 == 0) {
+	const array_nomes = tabela_placar_filtrada.filter((el, i) => {
+		if (i % 2 == 0) {
 			return el
 		}
 	})
 
-	console.log(array_nomes)
+	// console.log(array_nomes)
 
-	console.log(array_pontuacao_elementos)
+	// console.log(array_pontuacao_elementos)
 }
 
 //função para verificar se os campos de nome estão vazios ou não e habilitar o botão de iniciar
@@ -1534,7 +1670,7 @@ const verificar_campos_formulario = () => {
 verificar_campos_formulario();
 
 const colocacao_jogadores = () => {
-	
+
 }
 
 //Um escutador de eventos no botão de iniciar o jogo que realiza uma serie de ações
